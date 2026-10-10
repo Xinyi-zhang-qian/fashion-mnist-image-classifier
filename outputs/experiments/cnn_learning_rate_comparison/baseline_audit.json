@@ -1,0 +1,139 @@
+{
+  "original_experiment": "outputs/experiments/cnn_sgd_15epochs",
+  "original_config_matches": true,
+  "original_config": {
+    "seed": 42,
+    "shuffle_seed": 42,
+    "split_seed": 42,
+    "device": "cpu",
+    "epochs_requested": 15,
+    "batch_size": 64,
+    "num_workers": 0,
+    "learning_rate": 0.01,
+    "optimizer": "SGD (momentum=0, weight_decay=0)",
+    "preprocessing": "ToTensor() only",
+    "train_samples": 50000,
+    "validation_samples": 10000,
+    "test_set_used": false
+  },
+  "original_environment_matches": true,
+  "data_and_cnn_source_unchanged": true,
+  "optimizer_and_metric_calculation_unchanged": true,
+  "new_observation_only_changes": [
+    "finite-value checks",
+    "initial parameter and loader-state fingerprints",
+    "per-epoch history persistence"
+  ],
+  "initialization_evidence": "Original history and code reset torch seed 42 and create a fresh model/optimizer/loader; original first-five-epoch reproduction was verified in its comparison record.",
+  "limitations": [
+    "Original 0.01 run did not store initial-weight or batch-order fingerprints; replayed states are reconstructed evidence, not recorded original-run states.",
+    "New per-batch finite checks and history writes add overhead; recorded times are not a strict speed benchmark.",
+    "One seed and validation split; no test-set evaluation."
+  ],
+  "reconstructed_initial_parameter_sha256": "d93fb0fa32c5d99dbe0810ecee5f0710f8caf3e491a2b8da4a594a26750f8353",
+  "expected_initial_loader_state_sha256": "5feb54a46230d321d888e9b43cf5a57492665f199e4377408d79ee460e36679c",
+  "expected_loader_states": [
+    {
+      "epoch": 1,
+      "before": "5feb54a46230d321d888e9b43cf5a57492665f199e4377408d79ee460e36679c",
+      "after": "490c44bdc2875a27255623958f10590dff9cbeaf588e224aee4fbb496547c096",
+      "sample_position_order_sha256": "62ffd783a9fdc225328969a833abb3aa274f87b4688a704742d9f9a0eb489e61"
+    },
+    {
+      "epoch": 2,
+      "before": "490c44bdc2875a27255623958f10590dff9cbeaf588e224aee4fbb496547c096",
+      "after": "d72c64aa3be0895836936b3071c1cdb5fe43b588b20bef45634c05ba08c2cab7",
+      "sample_position_order_sha256": "23202cf90986abcba2a16ae97fc08ed634ff989d9629b3ea9566202b269c1ebc"
+    },
+    {
+      "epoch": 3,
+      "before": "d72c64aa3be0895836936b3071c1cdb5fe43b588b20bef45634c05ba08c2cab7",
+      "after": "44553126fde0fdcad43cf0d4f95c684f2e99cb9f106e09c11e10be84390fac30",
+      "sample_position_order_sha256": "3df6f06b495820d62f66a6279df6ab1ffd63fd8b229f0dc6110e47a8f63747c9"
+    },
+    {
+      "epoch": 4,
+      "before": "44553126fde0fdcad43cf0d4f95c684f2e99cb9f106e09c11e10be84390fac30",
+      "after": "0ab95dde9e4069f0f2421ea53864e42cf9f520e086da046bfbecf006168ed7ba",
+      "sample_position_order_sha256": "5e77cd96bcb98d619d6934b60ef6b6a6496c6ae8107f4a0324c7dfd88f5c199c"
+    },
+    {
+      "epoch": 5,
+      "before": "0ab95dde9e4069f0f2421ea53864e42cf9f520e086da046bfbecf006168ed7ba",
+      "after": "cacc711501fa6259dfa406dc527dee612f6e717e92218b87571586340809221e",
+      "sample_position_order_sha256": "964d13171d55007a0f9094e4e5e6035501e43a0a4d99562ee584ab2d1200ffa8"
+    },
+    {
+      "epoch": 6,
+      "before": "cacc711501fa6259dfa406dc527dee612f6e717e92218b87571586340809221e",
+      "after": "3b640bc7724ca1510bfc9e50ccbf6b80af2175ef4c1d7ef0e31c209094dc9e29",
+      "sample_position_order_sha256": "fc769ed9486df84946256408c5e62ec330ac10e117e579232809bb5833a6de00"
+    },
+    {
+      "epoch": 7,
+      "before": "3b640bc7724ca1510bfc9e50ccbf6b80af2175ef4c1d7ef0e31c209094dc9e29",
+      "after": "c0170c08ad2f7f8c8be07ecf999c9c50d713f98d8bfd1ecc84ed60f7c44de711",
+      "sample_position_order_sha256": "0f4dd728664715ee7e1a00c17b9fabbaa8fce68c3d5b39eed8202e8af8ce7f95"
+    },
+    {
+      "epoch": 8,
+      "before": "c0170c08ad2f7f8c8be07ecf999c9c50d713f98d8bfd1ecc84ed60f7c44de711",
+      "after": "9cd7a2634fd810ef1a2d3f289533247e10c579df3e7bdd25ead6fe2f7b9d6438",
+      "sample_position_order_sha256": "40fcea694c7f03f08f0973591d9123846b2f2619a2ac39bd853f15c09f8ae342"
+    },
+    {
+      "epoch": 9,
+      "before": "9cd7a2634fd810ef1a2d3f289533247e10c579df3e7bdd25ead6fe2f7b9d6438",
+      "after": "de6c97661409304c9126a4845ab83f112545d6faf926f5d9ff12f604dadd0338",
+      "sample_position_order_sha256": "f459ddf731392e6e039520ef26cbba60df4622ff915135cfca4b332784d50057"
+    },
+    {
+      "epoch": 10,
+      "before": "de6c97661409304c9126a4845ab83f112545d6faf926f5d9ff12f604dadd0338",
+      "after": "8ad841ab17195274c932de8bcac7f0b4714973302a6d0637c0ca607f2d45fc72",
+      "sample_position_order_sha256": "e77bd5eac060363aa90b825f3faa3be2c60336c673d6303e4c9c76ea782dd3a5"
+    },
+    {
+      "epoch": 11,
+      "before": "8ad841ab17195274c932de8bcac7f0b4714973302a6d0637c0ca607f2d45fc72",
+      "after": "3f754ac36ebdf185516e21a175c3e25e4292ee28619e7f50b51f5fe7b8cefa49",
+      "sample_position_order_sha256": "5ce6ebc6017038c9047057e31fdfa95333db78fd89a371449e90515bbd26c098"
+    },
+    {
+      "epoch": 12,
+      "before": "3f754ac36ebdf185516e21a175c3e25e4292ee28619e7f50b51f5fe7b8cefa49",
+      "after": "f2fbed9bdb6cecb392998c1a784dbf17cfc4dc4c14dec5d41afcb0bc2a4c4e78",
+      "sample_position_order_sha256": "349a60a1a506b419e875ef609a9438b9f94c8bb345fa4c920aa1a75cba2f2a2b"
+    },
+    {
+      "epoch": 13,
+      "before": "f2fbed9bdb6cecb392998c1a784dbf17cfc4dc4c14dec5d41afcb0bc2a4c4e78",
+      "after": "f02aa11f13e44d581c86efdff98040896bf961098c6666aa8a635dbe7eec286f",
+      "sample_position_order_sha256": "217c4f50ac55b7a5d33b6529cac6ba6fd4fb39fafc3290ffd217755ff3c0f1e7"
+    },
+    {
+      "epoch": 14,
+      "before": "f02aa11f13e44d581c86efdff98040896bf961098c6666aa8a635dbe7eec286f",
+      "after": "d6daf6309fd9875d9957a2271a44720da1bc70701af36257e02684aad088dc0d",
+      "sample_position_order_sha256": "c53c8d4a9a2ae6db16d7c91c12a93f6d0e12883fc2b20a1150229201fe3d7673"
+    },
+    {
+      "epoch": 15,
+      "before": "d6daf6309fd9875d9957a2271a44720da1bc70701af36257e02684aad088dc0d",
+      "after": "b91fcb7e8b6d8ad810f5bcb1fe5f5f7542a85d384e137d765171d9c4ebe35577",
+      "sample_position_order_sha256": "1a07f15e7b9de0d7a2e2dfbff811cde5733b73db76158fe43641c116fccea588"
+    }
+  ],
+  "numerical_guard_test_passed": true,
+  "invalid_learning_rate_test_passed": true,
+  "environment": {
+    "python": "3.11.13",
+    "cpu_threads": 6,
+    "versions": {
+      "torch": "2.2.2",
+      "torchvision": "0.17.2",
+      "numpy": "1.26.4",
+      "matplotlib": "3.11.2"
+    }
+  }
+}

@@ -1,0 +1,258 @@
+{
+  "model": {
+    "name": "SimpleCNN",
+    "structure": "SimpleCNN(\n  (layers): Sequential(\n    (0): Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (1): ReLU()\n    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (3): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (4): ReLU()\n    (5): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (6): Flatten(start_dim=1, end_dim=-1)\n    (7): Linear(in_features=1568, out_features=64, bias=True)\n    (8): ReLU()\n    (9): Linear(in_features=64, out_features=10, bias=True)\n  )\n)",
+    "parameter_count": 105866
+  },
+  "seed": 42,
+  "device": "cpu",
+  "learning_rate": 0.01,
+  "optimizer": "SGD (momentum=0, weight_decay=0)",
+  "loss_function": "CrossEntropyLoss (raw logits, reduction=mean)",
+  "batch_size": 64,
+  "num_workers": 0,
+  "epochs_requested": 5,
+  "accuracy_unit": "fraction (0 to 1)",
+  "train_samples": 50000,
+  "validation_samples": 10000,
+  "batches_per_epoch": 782,
+  "validation_batches": 157,
+  "split_seed": 42,
+  "test_set_used": false,
+  "cpu_threads": 6,
+  "python": "3.11.13",
+  "versions": {
+    "torch": "2.2.2",
+    "torchvision": "0.17.2",
+    "numpy": "1.26.4",
+    "matplotlib": "3.11.2"
+  },
+  "flow_check": {
+    "train": {
+      "loss": 2.3031134605407715,
+      "accuracy": 0.109375,
+      "correct": 21,
+      "samples": 192,
+      "batches": 3
+    },
+    "validation": {
+      "loss": 2.30392849445343,
+      "accuracy": 0.0859375,
+      "correct": 11,
+      "samples": 128,
+      "batches": 2
+    },
+    "seconds": 0.08684386499226093
+  },
+  "epochs": [
+    {
+      "epoch": 1,
+      "train": {
+        "loss": 1.3236662133407593,
+        "accuracy": 0.54372,
+        "correct": 27186,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.9264444600105286,
+        "accuracy": 0.6432,
+        "correct": 6432,
+        "samples": 10000,
+        "batches": 157
+      },
+      "seconds": 14.350566246997914,
+      "saved_as_best": true
+    },
+    {
+      "epoch": 2,
+      "train": {
+        "loss": 0.6732466423988342,
+        "accuracy": 0.7492,
+        "correct": 37460,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.7302821311950684,
+        "accuracy": 0.7315,
+        "correct": 7315,
+        "samples": 10000,
+        "batches": 157
+      },
+      "seconds": 14.506420371006243,
+      "saved_as_best": true
+    },
+    {
+      "epoch": 3,
+      "train": {
+        "loss": 0.5921117651987076,
+        "accuracy": 0.78014,
+        "correct": 39007,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.6004650350093842,
+        "accuracy": 0.7696,
+        "correct": 7696,
+        "samples": 10000,
+        "batches": 157
+      },
+      "seconds": 14.394508316996507,
+      "saved_as_best": true
+    },
+    {
+      "epoch": 4,
+      "train": {
+        "loss": 0.5447936752510071,
+        "accuracy": 0.79924,
+        "correct": 39962,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.5526834624767304,
+        "accuracy": 0.8064,
+        "correct": 8064,
+        "samples": 10000,
+        "batches": 157
+      },
+      "seconds": 14.59383768500993,
+      "saved_as_best": true
+    },
+    {
+      "epoch": 5,
+      "train": {
+        "loss": 0.5044034756565094,
+        "accuracy": 0.81592,
+        "correct": 40796,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.511529973745346,
+        "accuracy": 0.8103,
+        "correct": 8103,
+        "samples": 10000,
+        "batches": 157
+      },
+      "seconds": 14.230380018008873,
+      "saved_as_best": true
+    }
+  ],
+  "shape_check": {
+    "batch_size": 64,
+    "layer_shapes": [
+      [
+        64,
+        1,
+        28,
+        28
+      ],
+      [
+        64,
+        16,
+        28,
+        28
+      ],
+      [
+        64,
+        16,
+        28,
+        28
+      ],
+      [
+        64,
+        16,
+        14,
+        14
+      ],
+      [
+        64,
+        32,
+        14,
+        14
+      ],
+      [
+        64,
+        32,
+        14,
+        14
+      ],
+      [
+        64,
+        32,
+        7,
+        7
+      ],
+      [
+        64,
+        1568
+      ],
+      [
+        64,
+        64
+      ],
+      [
+        64,
+        64
+      ],
+      [
+        64,
+        10
+      ]
+    ],
+    "parameter_count": 105866
+  },
+  "training_seconds": 72.07585184399795,
+  "total_parameter_updates": 3910,
+  "best_epoch": 5,
+  "best_validation_accuracy": 0.8103,
+  "checkpoint": "outputs/best_cnn.pt",
+  "reload_validation": {
+    "loss": 0.511529973745346,
+    "accuracy": 0.8103,
+    "correct": 8103,
+    "samples": 10000,
+    "batches": 157
+  },
+  "reload_validation_seconds": 1.6674112059990875,
+  "validation_examples": {
+    "file": "outputs/cnn_validation_predictions.png",
+    "official_training_indices": [
+      59753,
+      9414,
+      10988,
+      15501,
+      49861,
+      36839,
+      28752,
+      18201,
+      14976
+    ],
+    "true_labels": [
+      6,
+      1,
+      8,
+      7,
+      5,
+      1,
+      7,
+      1,
+      1
+    ],
+    "predicted_labels": [
+      2,
+      1,
+      8,
+      7,
+      5,
+      1,
+      7,
+      1,
+      1
+    ],
+    "correct": 8
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "rule": "五个最多的有向混淆各取官方测试顺序前3张，再按顺序补足16张；不按外观挑选。",
+  "limit": "用于展示主要错误类型；这些图片不按错误频率抽样，不能代替完整统计。",
+  "examples": [
+    {
+      "test_index": 40,
+      "true_label": 6,
+      "predicted_label": 0,
+      "true_class": "Shirt",
+      "predicted_class": "T-shirt/top",
+      "is_correct": false,
+      "cross_entropy_loss": 2.2228431701660156
+    },
+    {
+      "test_index": 147,
+      "true_label": 6,
+      "predicted_label": 0,
+      "true_class": "Shirt",
+      "predicted_class": "T-shirt/top",
+      "is_correct": false,
+      "cross_entropy_loss": 8.520721435546875
+    },
+    {
+      "test_index": 474,
+      "true_label": 6,
+      "predicted_label": 0,
+      "true_class": "Shirt",
+      "predicted_class": "T-shirt/top",
+      "is_correct": false,
+      "cross_entropy_loss": 1.3957220315933228
+    },
+    {
+      "test_index": 359,
+      "true_label": 0,
+      "predicted_label": 6,
+      "true_class": "T-shirt/top",
+      "predicted_class": "Shirt",
+      "is_correct": false,
+      "cross_entropy_loss": 0.9617480039596558
+    },
+    {
+      "test_index": 374,
+      "true_label": 0,
+      "predicted_label": 6,
+      "true_class": "T-shirt/top",
+      "predicted_class": "Shirt",
+      "is_correct": false,
+      "cross_entropy_loss": 0.8804171085357666
+    },
+    {
+      "test_index": 381,
+      "true_label": 0,
+      "predicted_label": 6,
+      "true_class": "T-shirt/top",
+      "predicted_class": "Shirt",
+      "is_correct": false,
+      "cross_entropy_loss": 7.961025238037109
+    },
+    {
+      "test_index": 457,
+      "true_label": 2,
+      "predicted_label": 4,
+      "true_class": "Pullover",
+      "predicted_class": "Coat",
+      "is_correct": false,
+      "cross_entropy_loss": 1.553937554359436
+    },
+    {
+      "test_index": 715,
+      "true_label": 2,
+      "predicted_label": 4,
+      "true_class": "Pullover",
+      "predicted_class": "Coat",
+      "is_correct": false,
+      "cross_entropy_loss": 3.2356367111206055
+    },
+    {
+      "test_index": 817,
+      "true_label": 2,
+      "predicted_label": 4,
+      "true_class": "Pullover",
+      "predicted_class": "Coat",
+      "is_correct": false,
+      "cross_entropy_loss": 0.9638084173202515
+    },
+    {
+      "test_index": 389,
+      "true_label": 6,
+      "predicted_label": 4,
+      "true_class": "Shirt",
+      "predicted_class": "Coat",
+      "is_correct": false,
+      "cross_entropy_loss": 0.9800216555595398
+    },
+    {
+      "test_index": 444,
+      "true_label": 6,
+      "predicted_label": 4,
+      "true_class": "Shirt",
+      "predicted_class": "Coat",
+      "is_correct": false,
+      "cross_entropy_loss": 1.0168426036834717
+    },
+    {
+      "test_index": 1025,
+      "true_label": 6,
+      "predicted_label": 4,
+      "true_class": "Shirt",
+      "predicted_class": "Coat",
+      "is_correct": false,
+      "cross_entropy_loss": 4.854126453399658
+    },
+    {
+      "test_index": 49,
+      "true_label": 2,
+      "predicted_label": 6,
+      "true_class": "Pullover",
+      "predicted_class": "Shirt",
+      "is_correct": false,
+      "cross_entropy_loss": 0.8800158500671387
+    },
+    {
+      "test_index": 248,
+      "true_label": 2,
+      "predicted_label": 6,
+      "true_class": "Pullover",
+      "predicted_class": "Shirt",
+      "is_correct": false,
+      "cross_entropy_loss": 0.7880737781524658
+    },
+    {
+      "test_index": 361,
+      "true_label": 2,
+      "predicted_label": 6,
+      "true_class": "Pullover",
+      "predicted_class": "Shirt",
+      "is_correct": false,
+      "cross_entropy_loss": 1.4708000421524048
+    },
+    {
+      "test_index": 12,
+      "true_label": 7,
+      "predicted_label": 5,
+      "true_class": "Sneaker",
+      "predicted_class": "Sandal",
+      "is_correct": false,
+      "cross_entropy_loss": 2.1255650520324707
+    }
+  ]
+}

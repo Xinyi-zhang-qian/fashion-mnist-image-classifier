@@ -1,0 +1,129 @@
+{
+  "source_epoch": 45,
+  "source_checkpoint": "outputs/experiments/v2_sgd_lr003_45epochs/checkpoint_epoch_45.pt",
+  "source_checkpoint_sha256": "fe9716e50dc107697fe406bb6b1176affa968abaf35400556089bfbc9492069f",
+  "baseline_validation": {
+    "loss": 0.26141705612540245,
+    "accuracy": 0.915,
+    "correct": 9150,
+    "samples": 10000,
+    "batches": 157,
+    "class_recall": {
+      "label": 6,
+      "total": 1033,
+      "correct": 824,
+      "recall": 0.797676669893514
+    }
+  },
+  "selected_epoch": 52,
+  "selected_validation": {
+    "loss": 0.26007638668715954,
+    "accuracy": 0.9166,
+    "correct": 9166,
+    "samples": 10000,
+    "batches": 157,
+    "class_recall": {
+      "label": 6,
+      "total": 1033,
+      "correct": 783,
+      "recall": 0.7579864472410455
+    }
+  },
+  "selected_checkpoint": "outputs/experiments/v2_resume45_lr001_15epochs/best_cnn.pt",
+  "selected_checkpoint_sha256": "c972ca96c5d63c81998a6d884f57ebc42406f04a02c5368bdf1d01178d19a570",
+  "final_epoch": 60,
+  "final_validation": {
+    "loss": 0.27537304744496943,
+    "accuracy": 0.9163,
+    "correct": 9163,
+    "samples": 10000,
+    "batches": 157,
+    "class_recall": {
+      "label": 6,
+      "total": 1033,
+      "correct": 780,
+      "recall": 0.755082284607938
+    }
+  },
+  "accuracy_change_from_baseline_percentage_points": 0.15999999999999348,
+  "common_continuation_epochs": [
+    46,
+    54
+  ],
+  "matched_sample_order_epochs": 9,
+  "common_window": {
+    "lr001": {
+      "best_epoch_including_baseline": 52,
+      "best_validation": {
+        "loss": 0.26007638668715954,
+        "accuracy": 0.9166,
+        "correct": 9166,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 783,
+          "recall": 0.7579864472410455
+        }
+      },
+      "mean_training_loss": 0.1064930451074822,
+      "mean_validation_loss": 0.2598477100895511,
+      "mean_validation_accuracy": 0.9148333333333333,
+      "mean_shirt_recall": 0.7408841561794127,
+      "validation_accuracy_range": [
+        0.9128,
+        0.9166
+      ]
+    },
+    "lr003": {
+      "best_epoch_including_baseline": 45,
+      "best_validation": {
+        "loss": 0.26141705612540245,
+        "accuracy": 0.915,
+        "correct": 9150,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 824,
+          "recall": 0.797676669893514
+        }
+      },
+      "mean_training_loss": 0.12474117631417182,
+      "mean_validation_loss": 0.2851282792966399,
+      "mean_validation_accuracy": 0.9077444444444445,
+      "mean_shirt_recall": 0.7151769387974616,
+      "validation_accuracy_range": [
+        0.891,
+        0.9135
+      ]
+    }
+  },
+  "completed_extra_epochs": 15,
+  "continuation_seconds": 312.86948722798843,
+  "test_set_used": false,
+  "limitations": [
+    "The old 0.03 branch stopped at 54; only 46-54 is a matched-budget comparison.",
+    "One checkpoint, one validation split and one random trajectory; no test-set evidence.",
+    "Selected loss, accuracy and Shirt recall all belong to the same checkpoint."
+  ],
+  "new_lr_windows": {
+    "46-50": {
+      "mean_training_loss": 0.10963505921983718,
+      "mean_validation_loss": 0.2564508955642581,
+      "mean_validation_accuracy": 0.9146799999999999
+    },
+    "51-55": {
+      "mean_training_loss": 0.10192458852355182,
+      "mean_validation_loss": 0.2668019558236003,
+      "mean_validation_accuracy": 0.91442
+    },
+    "56-60": {
+      "mean_training_loss": 0.0953280329298973,
+      "mean_validation_loss": 0.28147924317218365,
+      "mean_validation_accuracy": 0.91204
+    }
+  }
+}

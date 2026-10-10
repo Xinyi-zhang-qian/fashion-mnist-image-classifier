@@ -1,0 +1,32 @@
+{
+  "can_resume_continuously": true,
+  "source_checkpoint": "outputs/experiments/v2_sgd_lr003_45epochs/checkpoint_epoch_45.pt",
+  "source_checkpoint_sha256": "fe9716e50dc107697fe406bb6b1176affa968abaf35400556089bfbc9492069f",
+  "completed_epoch": 45,
+  "restored_parameter_sha256": "f750dd1e3d663a5a0f559a8a425422ad6fe251adc76480ef4f20bbea0bb7ac71",
+  "optimizer_state_restored": true,
+  "random_states_restored": [
+    "numpy",
+    "python",
+    "torch_cpu",
+    "train_loader_generator",
+    "validation_loader_generator"
+  ],
+  "validation_generator": "None; uses saved global torch RNG",
+  "validation_matches_epoch45": {
+    "loss": 0.26141705612540245,
+    "accuracy": 0.915,
+    "correct": 9150,
+    "samples": 10000,
+    "batches": 157,
+    "class_recall": {
+      "label": 6,
+      "total": 1033,
+      "correct": 824,
+      "recall": 0.797676669893514
+    }
+  },
+  "random_state_restored_after_inspection": true,
+  "restored_loader_state_sha256": "4938cda898cb6e872ddce1075d12124290cecdf6ca3bfc939608cdaff1c4dbaf",
+  "test_set_used": false
+}

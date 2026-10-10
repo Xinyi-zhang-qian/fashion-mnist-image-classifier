@@ -1,0 +1,13 @@
+{
+  "loss": 0.26007638668715954,
+  "accuracy": 0.9166,
+  "correct": 9166,
+  "samples": 10000,
+  "batches": 157,
+  "class_recall": {
+    "label": 6,
+    "total": 1033,
+    "correct": 783,
+    "recall": 0.7579864472410455
+  }
+}

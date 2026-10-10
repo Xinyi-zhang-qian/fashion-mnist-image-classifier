@@ -1,0 +1,636 @@
+{
+  "scope": "Two fresh 45-epoch runs; learning rate comparison at equal training budgets.",
+  "test_set_used": false,
+  "v1_replaced": false,
+  "v1_validation": {
+    "loss": 0.30977914645671845,
+    "accuracy": 0.8902,
+    "correct": 8902,
+    "samples": 10000,
+    "batches": 157,
+    "class_recall": {
+      "label": 6,
+      "total": 1033,
+      "correct": 553,
+      "recall": 0.5353339787028074
+    }
+  },
+  "initial_parameter_sha256": "d93fb0fa32c5d99dbe0810ecee5f0710f8caf3e491a2b8da4a594a26750f8353",
+  "sample_order_matching_epochs": 45,
+  "common_config": {
+    "model": {
+      "name": "SimpleCNN",
+      "structure": "SimpleCNN(\n  (layers): Sequential(\n    (0): Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (1): ReLU()\n    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (3): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (4): ReLU()\n    (5): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (6): Flatten(start_dim=1, end_dim=-1)\n    (7): Linear(in_features=1568, out_features=64, bias=True)\n    (8): ReLU()\n    (9): Linear(in_features=64, out_features=10, bias=True)\n  )\n)",
+      "parameter_count": 105866
+    },
+    "optimizer": "SGD (momentum=0, weight_decay=0)",
+    "optimizer_defaults": {
+      "momentum": 0,
+      "dampening": 0,
+      "weight_decay": 0,
+      "nesterov": false,
+      "maximize": false,
+      "foreach": null,
+      "differentiable": false
+    },
+    "loss_function": "CrossEntropyLoss (raw logits, reduction=mean)",
+    "seed": 42,
+    "split_seed": 42,
+    "shuffle_seed": 42,
+    "preprocessing": "ToTensor() only",
+    "batch_size": 64,
+    "num_workers": 0,
+    "train_shuffle": true,
+    "validation_shuffle": false,
+    "drop_last": false,
+    "device": "cpu",
+    "cpu_threads": 6,
+    "epochs_requested": 45,
+    "train_samples": 50000,
+    "validation_samples": 10000,
+    "batches_per_epoch": 782,
+    "validation_batches": 157,
+    "train_indices_sha256": "a448c5b6b20079fc657a6c5eee8ec6b22bdd1f0c1e76c9655deb217485cf2bb5",
+    "validation_indices_sha256": "8b4a616012cc94d9f775db511b05b73f276f2e9d953702badc238b63249f225d",
+    "class_names": [
+      "T-shirt/top",
+      "Trouser",
+      "Pullover",
+      "Dress",
+      "Coat",
+      "Sandal",
+      "Shirt",
+      "Sneaker",
+      "Bag",
+      "Ankle boot"
+    ],
+    "scheduler": null,
+    "augmentation": null,
+    "python": "3.11.13",
+    "versions": {
+      "torch": "2.2.2",
+      "torchvision": "0.17.2",
+      "numpy": "1.26.4",
+      "matplotlib": "3.11.2"
+    },
+    "test_set_used": false,
+    "best_selection_rule": "Higher validation accuracy; ties prefer lower validation loss; exact ties keep earlier."
+  },
+  "models": [
+    {
+      "learning_rate": 0.01,
+      "status": "completed",
+      "best_epoch": 44,
+      "best_validation": {
+        "loss": 0.2770131911098957,
+        "accuracy": 0.901,
+        "correct": 9010,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 781,
+          "recall": 0.7560503388189739
+        }
+      },
+      "shirt_recall": 0.7560503388189739,
+      "shirt_to_pullover": 46,
+      "top_confusions": [
+        {
+          "true_label": 0,
+          "true_class": "T-shirt/top",
+          "predicted_label": 6,
+          "predicted_class": "Shirt",
+          "count": 130
+        },
+        {
+          "true_label": 6,
+          "true_class": "Shirt",
+          "predicted_label": 0,
+          "predicted_class": "T-shirt/top",
+          "count": 112
+        },
+        {
+          "true_label": 2,
+          "true_class": "Pullover",
+          "predicted_label": 4,
+          "predicted_class": "Coat",
+          "count": 81
+        },
+        {
+          "true_label": 4,
+          "true_class": "Coat",
+          "predicted_label": 6,
+          "predicted_class": "Shirt",
+          "count": 66
+        },
+        {
+          "true_label": 2,
+          "true_class": "Pullover",
+          "predicted_label": 6,
+          "predicted_class": "Shirt",
+          "count": 63
+        }
+      ],
+      "parameter_count": 105866,
+      "training_seconds": 782.7818828040035,
+      "checkpoint": "outputs/experiments/v2_sgd_lr001_45epochs/best_cnn.pt",
+      "checkpoint_sha256": "f6a9688f3ad643c6e2f1ca44ca337c423355c6bbc7c1b86869d3bc26fd04a1ee",
+      "best_within_horizons": {
+        "15": {
+          "best_epoch": 14,
+          "validation": {
+            "loss": 0.3698647301673889,
+            "accuracy": 0.8695,
+            "correct": 8695,
+            "samples": 10000,
+            "batches": 157,
+            "class_recall": {
+              "label": 6,
+              "total": 1033,
+              "correct": 523,
+              "recall": 0.5062923523717329
+            }
+          }
+        },
+        "30": {
+          "best_epoch": 28,
+          "validation": {
+            "loss": 0.30548100575208664,
+            "accuracy": 0.8923,
+            "correct": 8923,
+            "samples": 10000,
+            "batches": 157,
+            "class_recall": {
+              "label": 6,
+              "total": 1033,
+              "correct": 669,
+              "recall": 0.6476282671829623
+            }
+          }
+        },
+        "45": {
+          "best_epoch": 44,
+          "validation": {
+            "loss": 0.2770131911098957,
+            "accuracy": 0.901,
+            "correct": 9010,
+            "samples": 10000,
+            "batches": 157,
+            "class_recall": {
+              "label": 6,
+              "total": 1033,
+              "correct": 781,
+              "recall": 0.7560503388189739
+            }
+          }
+        }
+      },
+      "milestone_metrics": {
+        "15": {
+          "epoch": 15,
+          "train": {
+            "loss": 0.35251923128128054,
+            "accuracy": 0.87268,
+            "correct": 43634,
+            "samples": 50000,
+            "batches": 782
+          },
+          "validation": {
+            "loss": 0.3828141043663025,
+            "accuracy": 0.8623,
+            "correct": 8623,
+            "samples": 10000,
+            "batches": 157,
+            "class_recall": {
+              "label": 6,
+              "total": 1033,
+              "correct": 656,
+              "recall": 0.6350435624394967
+            }
+          },
+          "seconds": 17.099243239004863
+        },
+        "30": {
+          "epoch": 30,
+          "train": {
+            "loss": 0.2745753751087189,
+            "accuracy": 0.89984,
+            "correct": 44992,
+            "samples": 50000,
+            "batches": 782
+          },
+          "validation": {
+            "loss": 0.3089451233863831,
+            "accuracy": 0.8906,
+            "correct": 8906,
+            "samples": 10000,
+            "batches": 157,
+            "class_recall": {
+              "label": 6,
+              "total": 1033,
+              "correct": 626,
+              "recall": 0.6060019361084221
+            }
+          },
+          "seconds": 16.59830944100395
+        },
+        "45": {
+          "epoch": 45,
+          "train": {
+            "loss": 0.22767169754505157,
+            "accuracy": 0.91566,
+            "correct": 45783,
+            "samples": 50000,
+            "batches": 782
+          },
+          "validation": {
+            "loss": 0.29959684044718743,
+            "accuracy": 0.8892,
+            "correct": 8892,
+            "samples": 10000,
+            "batches": 157,
+            "class_recall": {
+              "label": 6,
+              "total": 1033,
+              "correct": 880,
+              "recall": 0.8518877057115198
+            }
+          },
+          "seconds": 17.967886436003027
+        }
+      },
+      "last_10_epochs": {
+        "epochs": [
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45
+        ],
+        "first_half": {
+          "first_epoch": 36,
+          "last_epoch": 40,
+          "mean_training_loss": 0.24676535889959333,
+          "mean_validation_loss": 0.29683867869138714,
+          "mean_validation_accuracy": 0.8934200000000001,
+          "mean_shirt_recall": 0.6807357212003872
+        },
+        "second_half": {
+          "first_epoch": 41,
+          "last_epoch": 45,
+          "mean_training_loss": 0.23323906775140762,
+          "mean_validation_loss": 0.293545805991888,
+          "mean_validation_accuracy": 0.8948,
+          "mean_shirt_recall": 0.7455953533397871
+        },
+        "train_loss": {
+          "first": 0.25271625641584394,
+          "last": 0.22767169754505157,
+          "minimum": 0.22767169754505157,
+          "maximum": 0.25271625641584394,
+          "range": 0.025044558870792377,
+          "linear_slope_per_epoch": -0.002718210272615615,
+          "increases": 0,
+          "decreases": 9
+        },
+        "validation_loss": {
+          "first": 0.28593708095550535,
+          "last": 0.29959684044718743,
+          "minimum": 0.2770131911098957,
+          "maximum": 0.31382355899810793,
+          "range": 0.036810367888212236,
+          "linear_slope_per_epoch": -0.0008839088755304247,
+          "increases": 5,
+          "decreases": 4
+        },
+        "validation_accuracy": {
+          "first": 0.8982,
+          "last": 0.8892,
+          "minimum": 0.8869,
+          "maximum": 0.901,
+          "range": 0.014100000000000001,
+          "linear_slope_per_epoch": 0.00018848484848480528,
+          "increases": 3,
+          "decreases": 6
+        },
+        "interpretation_limit": "Descriptive trends only; no proof of convergence, local optima or future performance."
+      },
+      "late_windows": {
+        "21-30": {
+          "first_epoch": 21,
+          "last_epoch": 30,
+          "mean_training_loss": 0.2924044427936077,
+          "mean_validation_loss": 0.3491872827935219,
+          "mean_validation_accuracy": 0.8739800000000001,
+          "mean_shirt_recall": 0.6575024201355276
+        },
+        "31-40": {
+          "first_epoch": 31,
+          "last_epoch": 40,
+          "mean_training_loss": 0.2548137306599617,
+          "mean_validation_loss": 0.31538785818517207,
+          "mean_validation_accuracy": 0.88573,
+          "mean_shirt_recall": 0.713649564375605
+        },
+        "36-45": {
+          "first_epoch": 36,
+          "last_epoch": 45,
+          "mean_training_loss": 0.24000221332550048,
+          "mean_validation_loss": 0.29519224234163766,
+          "mean_validation_accuracy": 0.8941100000000001,
+          "mean_shirt_recall": 0.7131655372700871
+        }
+      }
+    },
+    {
+      "learning_rate": 0.03,
+      "status": "completed",
+      "best_epoch": 45,
+      "best_validation": {
+        "loss": 0.26141705612540245,
+        "accuracy": 0.915,
+        "correct": 9150,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 824,
+          "recall": 0.797676669893514
+        }
+      },
+      "shirt_recall": 0.797676669893514,
+      "shirt_to_pullover": 60,
+      "top_confusions": [
+        {
+          "true_label": 0,
+          "true_class": "T-shirt/top",
+          "predicted_label": 6,
+          "predicted_class": "Shirt",
+          "count": 146
+        },
+        {
+          "true_label": 6,
+          "true_class": "Shirt",
+          "predicted_label": 0,
+          "predicted_class": "T-shirt/top",
+          "count": 78
+        },
+        {
+          "true_label": 2,
+          "true_class": "Pullover",
+          "predicted_label": 4,
+          "predicted_class": "Coat",
+          "count": 68
+        },
+        {
+          "true_label": 6,
+          "true_class": "Shirt",
+          "predicted_label": 2,
+          "predicted_class": "Pullover",
+          "count": 60
+        },
+        {
+          "true_label": 2,
+          "true_class": "Pullover",
+          "predicted_label": 6,
+          "predicted_class": "Shirt",
+          "count": 47
+        }
+      ],
+      "parameter_count": 105866,
+      "training_seconds": 776.0029346689989,
+      "checkpoint": "outputs/experiments/v2_sgd_lr003_45epochs/best_cnn.pt",
+      "checkpoint_sha256": "6a38fa08d2de620491947e914ec13ab9d102a5b944111d881aeedd5d63a5c4da",
+      "best_within_horizons": {
+        "15": {
+          "best_epoch": 14,
+          "validation": {
+            "loss": 0.30977914645671845,
+            "accuracy": 0.8902,
+            "correct": 8902,
+            "samples": 10000,
+            "batches": 157,
+            "class_recall": {
+              "label": 6,
+              "total": 1033,
+              "correct": 553,
+              "recall": 0.5353339787028074
+            }
+          }
+        },
+        "30": {
+          "best_epoch": 30,
+          "validation": {
+            "loss": 0.25406209219694137,
+            "accuracy": 0.9065,
+            "correct": 9065,
+            "samples": 10000,
+            "batches": 157,
+            "class_recall": {
+              "label": 6,
+              "total": 1033,
+              "correct": 782,
+              "recall": 0.7570183930300097
+            }
+          }
+        },
+        "45": {
+          "best_epoch": 45,
+          "validation": {
+            "loss": 0.26141705612540245,
+            "accuracy": 0.915,
+            "correct": 9150,
+            "samples": 10000,
+            "batches": 157,
+            "class_recall": {
+              "label": 6,
+              "total": 1033,
+              "correct": 824,
+              "recall": 0.797676669893514
+            }
+          }
+        }
+      },
+      "milestone_metrics": {
+        "15": {
+          "epoch": 15,
+          "train": {
+            "loss": 0.26008554314136506,
+            "accuracy": 0.90494,
+            "correct": 45247,
+            "samples": 50000,
+            "batches": 782
+          },
+          "validation": {
+            "loss": 0.30624967834949496,
+            "accuracy": 0.8881,
+            "correct": 8881,
+            "samples": 10000,
+            "batches": 157,
+            "class_recall": {
+              "label": 6,
+              "total": 1033,
+              "correct": 711,
+              "recall": 0.6882865440464666
+            }
+          },
+          "seconds": 15.617778047992033
+        },
+        "30": {
+          "epoch": 30,
+          "train": {
+            "loss": 0.18910739662885667,
+            "accuracy": 0.9299,
+            "correct": 46495,
+            "samples": 50000,
+            "batches": 782
+          },
+          "validation": {
+            "loss": 0.25406209219694137,
+            "accuracy": 0.9065,
+            "correct": 9065,
+            "samples": 10000,
+            "batches": 157,
+            "class_recall": {
+              "label": 6,
+              "total": 1033,
+              "correct": 782,
+              "recall": 0.7570183930300097
+            }
+          },
+          "seconds": 15.650405370004592
+        },
+        "45": {
+          "epoch": 45,
+          "train": {
+            "loss": 0.13773675432801247,
+            "accuracy": 0.9489,
+            "correct": 47445,
+            "samples": 50000,
+            "batches": 782
+          },
+          "validation": {
+            "loss": 0.26141705612540245,
+            "accuracy": 0.915,
+            "correct": 9150,
+            "samples": 10000,
+            "batches": 157,
+            "class_recall": {
+              "label": 6,
+              "total": 1033,
+              "correct": 824,
+              "recall": 0.797676669893514
+            }
+          },
+          "seconds": 20.229949300002772
+        }
+      },
+      "last_10_epochs": {
+        "epochs": [
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45
+        ],
+        "first_half": {
+          "first_epoch": 36,
+          "last_epoch": 40,
+          "mean_training_loss": 0.16010140986275673,
+          "mean_validation_loss": 0.2762332606554031,
+          "mean_validation_accuracy": 0.9035400000000001,
+          "mean_shirt_recall": 0.7616650532429816
+        },
+        "second_half": {
+          "first_epoch": 41,
+          "last_epoch": 45,
+          "mean_training_loss": 0.14445148567414284,
+          "mean_validation_loss": 0.2689636154356599,
+          "mean_validation_accuracy": 0.9087,
+          "mean_shirt_recall": 0.7558567279767667
+        },
+        "train_loss": {
+          "first": 0.16627507351756096,
+          "last": 0.13773675432801247,
+          "minimum": 0.13773675432801247,
+          "maximum": 0.16627507351756096,
+          "range": 0.028538319189548494,
+          "linear_slope_per_epoch": -0.003133214600555834,
+          "increases": 0,
+          "decreases": 9
+        },
+        "validation_loss": {
+          "first": 0.2558972529411316,
+          "last": 0.26141705612540245,
+          "minimum": 0.2558972529411316,
+          "maximum": 0.3033457560777664,
+          "range": 0.047448503136634845,
+          "linear_slope_per_epoch": -0.0004193952881296567,
+          "increases": 4,
+          "decreases": 5
+        },
+        "validation_accuracy": {
+          "first": 0.9078,
+          "last": 0.915,
+          "minimum": 0.8958,
+          "maximum": 0.915,
+          "range": 0.019199999999999995,
+          "linear_slope_per_epoch": 0.0007321212121211906,
+          "increases": 6,
+          "decreases": 3
+        },
+        "interpretation_limit": "Descriptive trends only; no proof of convergence, local optima or future performance."
+      },
+      "late_windows": {
+        "21-30": {
+          "first_epoch": 21,
+          "last_epoch": 30,
+          "mean_training_loss": 0.20658112449109556,
+          "mean_validation_loss": 0.2903885444486141,
+          "mean_validation_accuracy": 0.8953900000000001,
+          "mean_shirt_recall": 0.7086156824782188
+        },
+        "31-40": {
+          "first_epoch": 31,
+          "last_epoch": 40,
+          "mean_training_loss": 0.16884441485899687,
+          "mean_validation_loss": 0.28226327795296907,
+          "mean_validation_accuracy": 0.90091,
+          "mean_shirt_recall": 0.7600193610842207
+        },
+        "36-45": {
+          "first_epoch": 36,
+          "last_epoch": 45,
+          "mean_training_loss": 0.15227644776844979,
+          "mean_validation_loss": 0.2725984380455315,
+          "mean_validation_accuracy": 0.9061199999999999,
+          "mean_shirt_recall": 0.7587608906098742
+        }
+      }
+    }
+  ],
+  "limits": [
+    "One seed and one validation split; validation reused for selection.",
+    "No continuation experiment from one shared epoch-15 state.",
+    "45 epochs ending is not evidence of convergence; curve plateaus do not prove local optima.",
+    "Training loss averages changing parameters within each epoch; validation uses end-of-epoch parameters."
+  ],
+  "best_accuracy_gap_percentage_points": {
+    "15": 2.069999999999994,
+    "30": 1.419999999999999,
+    "45": 1.4000000000000012
+  }
+}

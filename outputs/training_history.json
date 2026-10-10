@@ -1,0 +1,194 @@
+{
+  "model": {
+    "name": "SimpleClassifier",
+    "structure": "SimpleClassifier(\n  (layers): Sequential(\n    (0): Flatten(start_dim=1, end_dim=-1)\n    (1): Linear(in_features=784, out_features=128, bias=True)\n    (2): ReLU()\n    (3): Linear(in_features=128, out_features=10, bias=True)\n  )\n)",
+    "parameter_count": 101770
+  },
+  "seed": 42,
+  "device": "cpu",
+  "learning_rate": 0.01,
+  "optimizer": "SGD (momentum=0, weight_decay=0)",
+  "loss_function": "CrossEntropyLoss (raw logits, reduction=mean)",
+  "batch_size": 64,
+  "num_workers": 0,
+  "epochs_requested": 5,
+  "accuracy_unit": "fraction (0 to 1)",
+  "train_samples": 50000,
+  "validation_samples": 10000,
+  "batches_per_epoch": 782,
+  "validation_batches": 157,
+  "split_seed": 42,
+  "test_set_used": false,
+  "cpu_threads": 6,
+  "python": "3.11.13",
+  "versions": {
+    "torch": "2.2.2",
+    "torchvision": "0.17.2",
+    "numpy": "1.26.4",
+    "matplotlib": "3.11.2"
+  },
+  "flow_check": {
+    "train": {
+      "loss": 2.287714163462321,
+      "accuracy": 0.16666666666666666,
+      "correct": 32,
+      "samples": 192,
+      "batches": 3
+    },
+    "validation": {
+      "loss": 2.2773921489715576,
+      "accuracy": 0.140625,
+      "correct": 18,
+      "samples": 128,
+      "batches": 2
+    },
+    "seconds": 0.05312359899835428
+  },
+  "epochs": [
+    {
+      "epoch": 1,
+      "train": {
+        "loss": 1.1993212391662598,
+        "accuracy": 0.63386,
+        "correct": 31693,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.8126750190734864,
+        "accuracy": 0.7091,
+        "correct": 7091,
+        "samples": 10000,
+        "batches": 157
+      },
+      "seconds": 5.3473829140057205,
+      "saved_as_best": true
+    },
+    {
+      "epoch": 2,
+      "train": {
+        "loss": 0.7108617798423768,
+        "accuracy": 0.75578,
+        "correct": 37789,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.6602543355941772,
+        "accuracy": 0.7734,
+        "correct": 7734,
+        "samples": 10000,
+        "batches": 157
+      },
+      "seconds": 5.517562756998814,
+      "saved_as_best": true
+    },
+    {
+      "epoch": 3,
+      "train": {
+        "loss": 0.6070279708385468,
+        "accuracy": 0.7966,
+        "correct": 39830,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.5887974280357361,
+        "accuracy": 0.8003,
+        "correct": 8003,
+        "samples": 10000,
+        "batches": 157
+      },
+      "seconds": 5.468505921999167,
+      "saved_as_best": true
+    },
+    {
+      "epoch": 4,
+      "train": {
+        "loss": 0.5525888426208496,
+        "accuracy": 0.81358,
+        "correct": 40679,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.5584422001838684,
+        "accuracy": 0.8136,
+        "correct": 8136,
+        "samples": 10000,
+        "batches": 157
+      },
+      "seconds": 5.661675511000794,
+      "saved_as_best": true
+    },
+    {
+      "epoch": 5,
+      "train": {
+        "loss": 0.5192948267936707,
+        "accuracy": 0.823,
+        "correct": 41150,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.5250746769428253,
+        "accuracy": 0.8213,
+        "correct": 8213,
+        "samples": 10000,
+        "batches": 157
+      },
+      "seconds": 5.900035412996658,
+      "saved_as_best": true
+    }
+  ],
+  "training_seconds": 27.89529538199713,
+  "total_parameter_updates": 3910,
+  "best_epoch": 5,
+  "best_validation_accuracy": 0.8213,
+  "checkpoint": "outputs/best_mlp.pt",
+  "reload_validation": {
+    "loss": 0.5250746769428253,
+    "accuracy": 0.8213,
+    "correct": 8213,
+    "samples": 10000,
+    "batches": 157
+  },
+  "reload_validation_seconds": 0.9708106120015145,
+  "validation_examples": {
+    "file": "outputs/validation_predictions.png",
+    "official_training_indices": [
+      59753,
+      9414,
+      10988,
+      15501,
+      49861,
+      36839,
+      28752,
+      18201,
+      14976
+    ],
+    "true_labels": [
+      6,
+      1,
+      8,
+      7,
+      5,
+      1,
+      7,
+      1,
+      1
+    ],
+    "predicted_labels": [
+      2,
+      1,
+      8,
+      7,
+      5,
+      1,
+      7,
+      1,
+      1
+    ],
+    "correct": 8
+  }
+}

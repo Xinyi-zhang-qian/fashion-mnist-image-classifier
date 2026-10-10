@@ -1,0 +1,50 @@
+{
+  "matched_settings": {
+    "seed": 42,
+    "split_seed": 42,
+    "learning_rate": 0.01,
+    "optimizer": "SGD (momentum=0, weight_decay=0)",
+    "loss_function": "CrossEntropyLoss (raw logits, reduction=mean)",
+    "batch_size": 64,
+    "num_workers": 0,
+    "device": "cpu",
+    "epochs_requested": 5,
+    "train_samples": 50000,
+    "validation_samples": 10000,
+    "batches_per_epoch": 782,
+    "cpu_threads": 6
+  },
+  "same_validation_records": true,
+  "models": {
+    "mlp": {
+      "best_epoch": 5,
+      "validation_accuracy": 0.8213,
+      "trainable_parameters": 101770,
+      "five_epoch_training_seconds": 27.89529538199713,
+      "shirt_recall": 0.5121006776379478,
+      "shirt_correct": 529,
+      "shirt_total": 1033,
+      "shirt_to_pullover": 185,
+      "checkpoint_sha256": "d6bd8eee430aa4df5d2fe261e5d2dab2e692b92f9697c6a54080c1338d74182a"
+    },
+    "cnn": {
+      "best_epoch": 5,
+      "validation_accuracy": 0.8103,
+      "trainable_parameters": 105866,
+      "five_epoch_training_seconds": 72.07585184399795,
+      "shirt_recall": 0.23426911907066797,
+      "shirt_correct": 242,
+      "shirt_total": 1033,
+      "shirt_to_pullover": 358,
+      "checkpoint_sha256": "c55aa19a0d73a8da208684461a1bf11c9c43c7ff3f588cc2b825c56433c6cb2e"
+    }
+  },
+  "cnn_minus_mlp": {
+    "validation_accuracy_percentage_points": -1.100000000000001,
+    "shirt_recall_percentage_points": -27.78315585672798,
+    "trainable_parameters": 4096,
+    "shirt_to_pullover": 173
+  },
+  "timing_scope": "Recorded training_seconds: all formal epochs including validation and best checkpoint saves.",
+  "limitation": "One run under the same settings; not independently tuned best performance for either model. No test-set evaluation."
+}

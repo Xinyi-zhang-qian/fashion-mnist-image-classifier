@@ -1,0 +1,8 @@
+name: ai-classifier
+channels:
+  - defaults
+dependencies:
+  - python=3.11.13
+  - pip
+  - pip:
+      - -r requirements.txt

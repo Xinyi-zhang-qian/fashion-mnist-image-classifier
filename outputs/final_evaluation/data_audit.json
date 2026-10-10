@@ -1,0 +1,309 @@
+{
+  "conclusion": "现有代码与留存记录支持：此前官方测试集未用于训练、调参或模型选择。",
+  "basis_limit": "这是对现有项目代码和记录的核查，不能证明未留存的外部操作。",
+  "early_test_access": "早期准备/前向演示曾加载测试数据、读取数量和类别名称，但模型计算和参数更新只使用训练批次，没有迭代测试批次。",
+  "validation_origin": "FashionMNIST train=True，seed=42 random_split 50000/10000",
+  "train_samples": 50000,
+  "validation_samples": 10000,
+  "overlap_count": 0,
+  "covers_all_60000_training_indices": true,
+  "train_indices_sha256": "a448c5b6b20079fc657a6c5eee8ec6b22bdd1f0c1e76c9655deb217485cf2bb5",
+  "validation_indices_sha256": "8b4a616012cc94d9f775db511b05b73f276f2e9d953702badc238b63249f225d",
+  "test_origin": "FashionMNIST train=False；官方独立文件，10000张；download=False",
+  "recorded_test_use_flags": [
+    {
+      "path": "outputs/cnn_class_metrics.json",
+      "key": "test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/cnn_training_history.json",
+      "key": "test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/experiments/cnn_learning_rate_comparison/baseline_audit.json",
+      "key": "original_config.test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/experiments/cnn_learning_rate_comparison/candidate_model.json",
+      "key": "config.test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/experiments/cnn_learning_rate_comparison/candidate_model.json",
+      "key": "test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/experiments/cnn_learning_rate_comparison/learning_rate_comparison.json",
+      "key": "matched_config.test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/experiments/cnn_sgd_15epochs/cnn_class_metrics.json",
+      "key": "test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/experiments/cnn_sgd_15epochs/cnn_training_history.json",
+      "key": "test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/experiments/cnn_sgd_lr0003_15epochs/cnn_class_metrics.json",
+      "key": "test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/experiments/cnn_sgd_lr0003_15epochs/cnn_training_history.json",
+      "key": "test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/experiments/cnn_sgd_lr003_15epochs/cnn_class_metrics.json",
+      "key": "test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/experiments/cnn_sgd_lr003_15epochs/cnn_history_analysis.json",
+      "key": "test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/experiments/cnn_sgd_lr003_15epochs/cnn_training_history.json",
+      "key": "test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/experiments/v2_comparison/experiment_checks.json",
+      "key": "test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/experiments/v2_comparison/preflight_checks.json",
+      "key": "resume.test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/experiments/v2_comparison/v2_comparison.json",
+      "key": "test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/experiments/v2_comparison/v2_comparison.json",
+      "key": "common_config.test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/experiments/v2_resume45_lr001_15epochs/cnn_training_history.json",
+      "key": "test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/experiments/v2_resume45_lr001_15epochs/cnn_training_history.json",
+      "key": "config.test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/experiments/v2_resume45_lr001_15epochs/cnn_training_history.json",
+      "key": "original_config.test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/experiments/v2_resume45_lr001_15epochs/experiment_checks.json",
+      "key": "test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/experiments/v2_resume45_lr001_15epochs/learning_rate_continuation_comparison.json",
+      "key": "test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/experiments/v2_resume45_lr001_15epochs/resume_check.json",
+      "key": "test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/experiments/v2_sgd_lr001_45epochs/cnn_class_metrics.json",
+      "key": "test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/experiments/v2_sgd_lr001_45epochs/cnn_training_history.json",
+      "key": "test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/experiments/v2_sgd_lr001_45epochs/cnn_training_history.json",
+      "key": "config.test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/experiments/v2_sgd_lr003_45epochs/cnn_class_metrics.json",
+      "key": "test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/experiments/v2_sgd_lr003_45epochs/cnn_training_history.json",
+      "key": "test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/experiments/v2_sgd_lr003_45epochs/cnn_training_history.json",
+      "key": "config.test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/experiments/v2_sgd_lr003_resume45_max15epochs/cnn_training_history.json",
+      "key": "test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/experiments/v2_sgd_lr003_resume45_max15epochs/cnn_training_history.json",
+      "key": "config.test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/experiments/v2_sgd_lr003_resume45_max15epochs/cnn_training_history.json",
+      "key": "original_config.test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/experiments/v2_sgd_lr003_resume45_max15epochs/continuation_checks.json",
+      "key": "test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/experiments/v2_sgd_lr003_resume45_max15epochs/resume_check.json",
+      "key": "test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/mlp_class_metrics.json",
+      "key": "test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/releases/v1/candidate_model.json",
+      "key": "config.test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/releases/v1/candidate_model.json",
+      "key": "test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/releases/v1/cnn_class_metrics.json",
+      "key": "test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/releases/v1/cnn_training_history.json",
+      "key": "test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/releases/v1/release_manifest.json",
+      "key": "training_config.test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/releases/v1/release_manifest.json",
+      "key": "test_set_used",
+      "value": false
+    },
+    {
+      "path": "outputs/training_history.json",
+      "key": "test_set_used",
+      "value": false
+    }
+  ],
+  "historical_json_sha256": {
+    "outputs/cnn_class_metrics.json": "5e465b5418559eadae0bdd489ce0d8a40680edab391ec04fc8012f145aabbe1f",
+    "outputs/cnn_training_history.json": "f08024a4eddbbb92eea55559ab5fbbd7e15f5d686697f94c0dc109bdfe8c2d24",
+    "outputs/cnn_validation_predictions.json": "ebbf255432ff384f91d973fd70ba01e58841159df957a506b0f13931f44453e8",
+    "outputs/experiments/cnn_learning_rate_comparison/baseline_audit.json": "cb7cfd1d52dcd74bae65e4f0b48ca98682e8c55ecb605f66ce68e69f536116df",
+    "outputs/experiments/cnn_learning_rate_comparison/candidate_model.json": "5a8b5585ace395eb77151d2978da3e0be66b0884314e1361d106ce6e885a4c5e",
+    "outputs/experiments/cnn_learning_rate_comparison/experiment_checks.json": "795d4a8a700c24ecd63d1352f4c65c4e1b30435e0673ea511de973996806b2cf",
+    "outputs/experiments/cnn_learning_rate_comparison/learning_rate_comparison.json": "3341d332afcaf2e67dca35b7b49f8307dbba34f7921e3f0691c8188949e0eb72",
+    "outputs/experiments/cnn_sgd_15epochs/cnn_class_metrics.json": "9aa011b46f001b80fee2a10b392e836d961d722bc727005f298c883d931f77e9",
+    "outputs/experiments/cnn_sgd_15epochs/cnn_training_history.json": "fdb676cd087b53f59800852c3a69ffe64c5361a39e62ab7e727374c6b987eec3",
+    "outputs/experiments/cnn_sgd_15epochs/cnn_validation_predictions.json": "741c1942e56a0a1a09f3dcbb0390883992473f0e53bd07364aa723944feec75b",
+    "outputs/experiments/cnn_sgd_15epochs/experiment_checks.json": "8ea47f13c8fdabede7003374c2905e629f2dcc6e8ca8f45b0adfedb09d1315f0",
+    "outputs/experiments/cnn_sgd_15epochs/model_comparison.json": "3a6da03186bb9a23086fbfbf8143db1f3deaa6cb205269346e0fd6b0c7926ac0",
+    "outputs/experiments/cnn_sgd_lr0003_15epochs/cnn_class_metrics.json": "532ef214328c670d77e12e66cb0e274295c5bf5a9e9b6344eb764e8fbe9a6966",
+    "outputs/experiments/cnn_sgd_lr0003_15epochs/cnn_training_history.json": "102fe9fe0b8449ee8086d86d4551ab3d39f5cc2f2235f166a594f043856ee022",
+    "outputs/experiments/cnn_sgd_lr0003_15epochs/cnn_validation_predictions.json": "4ef3d85746cd32a847a496eb95b45902f88d1682c5e3b2b9bc4a6a737171591b",
+    "outputs/experiments/cnn_sgd_lr003_15epochs/cnn_class_metrics.json": "53d102c570135627cdb3e3ce0ecf01bbd316ca2545c62c7e9cf9368a3c2cee0e",
+    "outputs/experiments/cnn_sgd_lr003_15epochs/cnn_history_analysis.json": "436b72cac84e94f58ade08f864e421f2b58f222aa31cc6b62b9e1974fafca20a",
+    "outputs/experiments/cnn_sgd_lr003_15epochs/cnn_training_history.json": "a3e2bff46a1509b3b9e68a30cd9b1bce7147848ce88a7ffb138d9db6c01cc5d9",
+    "outputs/experiments/cnn_sgd_lr003_15epochs/cnn_validation_predictions.json": "0c08bcdd500f76c65bb4811afe2f31f35125750cb5f913136b874c3f5afdb18a",
+    "outputs/experiments/v2_comparison/experiment_checks.json": "02bb22513d1cd5d106c61d19dffe58d14f1b7016480fdf3ee7fff8e3c33368e3",
+    "outputs/experiments/v2_comparison/preflight_checks.json": "b1cb7b0d32e3fe401a0a8e501bb7146811a71b872140c942bb63be29c9bcd08a",
+    "outputs/experiments/v2_comparison/v2_comparison.json": "dbe665f4aeb6e95c3b00686ded0870b26f48f42e5ae1cee0592ed87be8d53965",
+    "outputs/experiments/v2_resume45_lr001_15epochs/cnn_training_history.json": "6e35be0f2f389bf50bcc0fcd2aa1d0a587482e9a2ea12500b8302acbaa6bfee2",
+    "outputs/experiments/v2_resume45_lr001_15epochs/experiment_checks.json": "9e329b34b0642bd26db89a7159416ad99e5ec4d6968d32888471d2c708f2ec3e",
+    "outputs/experiments/v2_resume45_lr001_15epochs/learning_rate_continuation_comparison.json": "920b46da5b2898b3bfdc1e8a6642c97d68a8bd3f4bbbc0adc3f0c8c7f2bf5215",
+    "outputs/experiments/v2_resume45_lr001_15epochs/resume_check.json": "dfd7cff8cf72e2bfa326b9f47d10fadc762515a8e8f0f57123742f8b47301fb7",
+    "outputs/experiments/v2_sgd_lr001_45epochs/cnn_class_metrics.json": "85a868ea8d9d49fb6741acf01836cfe5a74a8d146a5b7fb51d5a9fcd4137469a",
+    "outputs/experiments/v2_sgd_lr001_45epochs/cnn_training_history.json": "ae5fd3f0773ca8994124e54827d5231aa212a0cda779fe9e3154a09b9626ab60",
+    "outputs/experiments/v2_sgd_lr001_45epochs/cnn_validation_predictions.json": "b43facd89ae8ec24a5276e4bc12242f559385ca14f598070f5a7a66cbae71fac",
+    "outputs/experiments/v2_sgd_lr003_45epochs/cnn_class_metrics.json": "15fc69e36ddd16d5d129dae1f53a183df38776289bab904c10ec87151f85ca47",
+    "outputs/experiments/v2_sgd_lr003_45epochs/cnn_training_history.json": "564c035a40f39f198e01dad436e8ca0f74199b324a0f8ef6e3d890166626348e",
+    "outputs/experiments/v2_sgd_lr003_45epochs/cnn_validation_predictions.json": "bd9b81e5fbfbc5cfde8ec03ac15b4e9f4dfa52744f8bebcae3683bc767e9ada9",
+    "outputs/experiments/v2_sgd_lr003_resume45_max15epochs/cnn_training_history.json": "6ac50fc6a2af90b2e993ca5b56c339f09a5a4f837be1503ebc26283e192f9b75",
+    "outputs/experiments/v2_sgd_lr003_resume45_max15epochs/continuation_checks.json": "e10cf8ad38dd21c951e9848713bb223f6634fb61a2eebadb5ab314db5c7261e4",
+    "outputs/experiments/v2_sgd_lr003_resume45_max15epochs/resume_check.json": "54b1211f30ca7bf08d71e6ca9a72cdec0d5b9438da0618752ee506f860c73f76",
+    "outputs/mlp_class_metrics.json": "9a4cbb6fb04d0a86d1ea8b08cb74e6f0aadb5b81fdaf526a6f1aa82f836984f2",
+    "outputs/mlp_cnn_comparison.json": "779a442fdee918afee81bd5794afb210c349cbf00d37b6e2de2050a2cc8a892f",
+    "outputs/mlp_validation_predictions.json": "23c4b3f60742a3a0a164a45ea54862c9833dd03b3cbc3410c9c8d7c6e9587352",
+    "outputs/releases/v1/candidate_model.json": "5a8b5585ace395eb77151d2978da3e0be66b0884314e1361d106ce6e885a4c5e",
+    "outputs/releases/v1/cnn_class_metrics.json": "53d102c570135627cdb3e3ce0ecf01bbd316ca2545c62c7e9cf9368a3c2cee0e",
+    "outputs/releases/v1/cnn_training_history.json": "a3e2bff46a1509b3b9e68a30cd9b1bce7147848ce88a7ffb138d9db6c01cc5d9",
+    "outputs/releases/v1/release_manifest.json": "5138027127ba6e06ab09c8322a19d13f531bc628fa343e84ce67a2fde7b784b3",
+    "outputs/releases/v1/split_indices.json": "806dd8624089f32ce888d1295ed6ffe579dcd9b3907bc8569d2cc6a21bf56e33",
+    "outputs/training_history.json": "4fa5d3d4337f875cd7efa07d35e82ef285b74f8cad3181032b57556f6dd1626f"
+  },
+  "reviewed_source_sha256": {
+    "data.py": "d7ea3182710ff2455121d687a3300b6f5c5c28319015b10800196f745767171c",
+    "show_samples.py": "e4c0ad93161f09fb48364df55b6f511473024b9ff40c7aa6baf75b1e89455391",
+    "check_data.py": "9801df70380eea31c0701eb0a32055057c6309c186a990256b99842a67cebfb6",
+    "check_model.py": "929b6432c5c15913ab23c414e7466e5f6f1839c43a41a899405e9b6b2ea7580f",
+    "demo_training_step.py": "31c9d585c4bf2ddc669aed559a728ac22020b5dad6f40798dbe6723b589f59e6",
+    "train_one_step.py": "342064569d0254b63c558e0b4ec83bf51088b23744cd2c0a29e20a7e13d13196",
+    "train.py": "20ce5c07f1866f73436a7962c820cb1f6423fc9b3349deccb3d24a3488760115",
+    "train_v2.py": "cadb8b55d93b13b52f7a731cbcaf20baee99396b5aae4f8b3264fa7eafc6f9c1",
+    "continue_cnn.py": "f705947ea3a00b2e52ea0b9c23b11e70df442ba8a503a7fd3c4345111d739b6b",
+    "continue_cnn_lower_lr.py": "1fa59f15493b7c0ff791bad656404705fb00244a6504a46a6aa84843ad34d3a1",
+    "analyze_errors.py": "6bbb2e7bbd58038c413061c70f3ed0a58864ea5685042c3e2d8e831c8af14b51",
+    "compare_models.py": "12329a78bd2bfd4af5e9d9894e828d88b97764cf2823491ef6b74436546f5893",
+    "compare_learning_rates.py": "5bba05942799e4b87a14f44d7d595f93da867e59642f62e75ba34ca23c845afa",
+    "compare_v2.py": "c85af140005ae029248d44df836369d445b03ec51309c36e5e720b86d46cd644"
+  },
+  "dataset_files": [
+    {
+      "path": "data/FashionMNIST/raw/train-images-idx3-ubyte",
+      "sha256": "c59f468a2f672dc815687fe0f83887768d799fd8a3f3276145d20f83aa44d888",
+      "official_archive_md5": "8d4fb7e6c68d591d4c3dfef9ec88bf0d"
+    },
+    {
+      "path": "data/FashionMNIST/raw/train-labels-idx1-ubyte",
+      "sha256": "bad3541b69d912435c50bb6ba87bec294ff4f6a2e1246121d8633921760443d9",
+      "official_archive_md5": "25c81989df183df01b3e8a0aad5dffbe"
+    },
+    {
+      "path": "data/FashionMNIST/raw/t10k-images-idx3-ubyte",
+      "sha256": "5b4141f0afbad91edebe8549f8fcffe087ea10ca49f1dbef5c9a5cd8815ce37b",
+      "official_archive_md5": "bef4ecab320f06d8554ea6380940ec79"
+    },
+    {
+      "path": "data/FashionMNIST/raw/t10k-labels-idx1-ubyte",
+      "sha256": "0402a96d92fd2663957122ceb108a494c5af83dab82d92729df917d7dec38c34",
+      "official_archive_md5": "bb300cfdad3c16e7a12a480ee83cd310"
+    }
+  ]
+}

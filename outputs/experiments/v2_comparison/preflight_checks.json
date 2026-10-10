@@ -1,0 +1,44 @@
+{
+  "0.01": {
+    "train": {
+      "loss": 2.3031134605407715,
+      "accuracy": 0.109375,
+      "correct": 21,
+      "samples": 192,
+      "batches": 3
+    },
+    "validation": {
+      "loss": 2.30392849445343,
+      "accuracy": 0.0859375,
+      "correct": 11,
+      "samples": 128,
+      "batches": 2
+    },
+    "seconds": 0.12377191000268795
+  },
+  "0.03": {
+    "train": {
+      "loss": 2.3021485805511475,
+      "accuracy": 0.109375,
+      "correct": 21,
+      "samples": 192,
+      "batches": 3
+    },
+    "validation": {
+      "loss": 2.302313446998596,
+      "accuracy": 0.0859375,
+      "correct": 11,
+      "samples": 128,
+      "batches": 2
+    },
+    "seconds": 0.07840069399389904
+  },
+  "resume": {
+    "temporary_model": true,
+    "resume_exact_parameters": true,
+    "resume_exact_metrics_and_order": true,
+    "python_numpy_torch_rng_restored": true,
+    "best_tie_rule_checked": true,
+    "test_set_used": false
+  }
+}

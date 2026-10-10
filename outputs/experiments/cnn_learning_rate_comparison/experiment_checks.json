@@ -1,0 +1,104 @@
+{
+  "checks": {
+    "all_original_files_preserved_except_documented_changes": true,
+    "original_001_experiment_not_rerun_or_modified": true,
+    "new_results_only_in_authorized_directories": true,
+    "validation_indices_and_labels_match_original_split": true,
+    "independent_confusion_matrices_and_recalls_match": true,
+    "first_errors_follow_fixed_validation_order": true,
+    "all_three_rows_use_same_epoch_metrics": true,
+    "candidate_path_config_and_metrics_match_saved_best": true,
+    "all_model_weights_finite_and_loadable": true,
+    "initial_parameters_and_loader_states_match_between_new_runs": true,
+    "saved_best_epoch_rule_matches_history": true,
+    "loss_and_rate_records_finite_and_consistent": true,
+    "all_new_pngs_opaque_and_readable": true,
+    "source_syntax_valid": true,
+    "mac_open_comparison_completed_exit_code_zero": true
+  },
+  "modified_existing_files": [
+    "PROGRESS.md",
+    "README.md",
+    "src/train.py"
+  ],
+  "preserved_existing_file_count": 58,
+  "new_files": [
+    "outputs/experiments/cnn_learning_rate_comparison/baseline_audit.json",
+    "outputs/experiments/cnn_learning_rate_comparison/candidate_model.json",
+    "outputs/experiments/cnn_learning_rate_comparison/experiment_checks.json",
+    "outputs/experiments/cnn_learning_rate_comparison/learning_rate_comparison.json",
+    "outputs/experiments/cnn_learning_rate_comparison/learning_rate_comparison.png",
+    "outputs/experiments/cnn_sgd_lr0003_15epochs/best_cnn.pt",
+    "outputs/experiments/cnn_sgd_lr0003_15epochs/cnn_class_metrics.json",
+    "outputs/experiments/cnn_sgd_lr0003_15epochs/cnn_confusion_matrix.png",
+    "outputs/experiments/cnn_sgd_lr0003_15epochs/cnn_errors.png",
+    "outputs/experiments/cnn_sgd_lr0003_15epochs/cnn_training_curves.png",
+    "outputs/experiments/cnn_sgd_lr0003_15epochs/cnn_training_history.json",
+    "outputs/experiments/cnn_sgd_lr0003_15epochs/cnn_validation_predictions.json",
+    "outputs/experiments/cnn_sgd_lr0003_15epochs/cnn_validation_predictions.png",
+    "outputs/experiments/cnn_sgd_lr0003_15epochs/shirt_recall.png",
+    "outputs/experiments/cnn_sgd_lr003_15epochs/best_cnn.pt",
+    "outputs/experiments/cnn_sgd_lr003_15epochs/cnn_class_metrics.json",
+    "outputs/experiments/cnn_sgd_lr003_15epochs/cnn_confusion_matrix.png",
+    "outputs/experiments/cnn_sgd_lr003_15epochs/cnn_errors.png",
+    "outputs/experiments/cnn_sgd_lr003_15epochs/cnn_training_curves.png",
+    "outputs/experiments/cnn_sgd_lr003_15epochs/cnn_training_history.json",
+    "outputs/experiments/cnn_sgd_lr003_15epochs/cnn_validation_predictions.json",
+    "outputs/experiments/cnn_sgd_lr003_15epochs/cnn_validation_predictions.png",
+    "outputs/experiments/cnn_sgd_lr003_15epochs/shirt_recall.png",
+    "src/compare_learning_rates.py"
+  ],
+  "candidate_checkpoint": "outputs/experiments/cnn_sgd_lr003_15epochs/best_cnn.pt",
+  "candidate_checkpoint_sha256": "8dd026b17e7dc2033d0c8b6e444ecb005a4a69c99b20ef4d85d15d0425de1e85",
+  "image_sizes": {
+    "outputs/experiments/cnn_sgd_lr0003_15epochs/cnn_errors.png": [
+      2040,
+      2040
+    ],
+    "outputs/experiments/cnn_sgd_lr0003_15epochs/cnn_training_curves.png": [
+      1800,
+      675
+    ],
+    "outputs/experiments/cnn_sgd_lr0003_15epochs/shirt_recall.png": [
+      1350,
+      750
+    ],
+    "outputs/experiments/cnn_sgd_lr0003_15epochs/cnn_confusion_matrix.png": [
+      1800,
+      1500
+    ],
+    "outputs/experiments/cnn_sgd_lr0003_15epochs/cnn_validation_predictions.png": [
+      1350,
+      1350
+    ],
+    "outputs/experiments/cnn_sgd_lr003_15epochs/cnn_errors.png": [
+      2040,
+      2040
+    ],
+    "outputs/experiments/cnn_sgd_lr003_15epochs/cnn_training_curves.png": [
+      1800,
+      675
+    ],
+    "outputs/experiments/cnn_sgd_lr003_15epochs/shirt_recall.png": [
+      1350,
+      750
+    ],
+    "outputs/experiments/cnn_sgd_lr003_15epochs/cnn_confusion_matrix.png": [
+      1800,
+      1500
+    ],
+    "outputs/experiments/cnn_sgd_lr003_15epochs/cnn_validation_predictions.png": [
+      1350,
+      1350
+    ],
+    "outputs/experiments/cnn_learning_rate_comparison/learning_rate_comparison.png": [
+      1950,
+      720
+    ]
+  },
+  "comparison_limitations": [
+    "Original 0.01 run did not store initial-weight or batch-order fingerprints; replayed states are reconstructed evidence, not recorded original-run states.",
+    "New per-batch finite checks and history writes add overhead; recorded times are not a strict speed benchmark.",
+    "One seed and validation split; no test-set evaluation."
+  ]
+}

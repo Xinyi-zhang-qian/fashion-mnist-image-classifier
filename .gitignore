@@ -1,0 +1,28 @@
+# This file belongs only to this project; the parent repository is unchanged.
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.matplotlib/
+.pytest_cache/
+.ipynb_checkpoints/
+.env
+.env.*
+*.pem
+*.key
+credentials*.json
+service-account*.json
+*.log
+*.tmp
+data/
+dist/
+checkpoints/
+**/checkpoint_epoch_*.pt
+*.pth
+*.ckpt
+*.pt
+!final_model/model.pt
+# Runtime prediction images and bulky per-image validation logs are local.
+outputs/final_prediction*.png
+outputs/**/*_validation_predictions.json

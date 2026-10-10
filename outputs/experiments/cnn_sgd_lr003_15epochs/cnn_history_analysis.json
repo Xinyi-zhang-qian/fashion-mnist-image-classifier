@@ -1,0 +1,131 @@
+{
+  "source_history": "outputs/experiments/cnn_sgd_lr003_15epochs/cnn_training_history.json",
+  "source_history_sha256": "a3e2bff46a1509b3b9e68a30cd9b1bce7147848ce88a7ffb138d9db6c01cc5d9",
+  "learning_rate": 0.03,
+  "analysis_only": true,
+  "training_performed": false,
+  "test_set_used": false,
+  "last_five_epochs": [
+    {
+      "epoch": 11,
+      "training_loss": 0.29142543429374695,
+      "validation_loss": 0.3362250345230103,
+      "training_accuracy": 0.89348,
+      "validation_accuracy": 0.8783
+    },
+    {
+      "epoch": 12,
+      "training_loss": 0.2825342612123489,
+      "validation_loss": 0.31360569435954094,
+      "training_accuracy": 0.8958,
+      "validation_accuracy": 0.8888
+    },
+    {
+      "epoch": 13,
+      "training_loss": 0.27461982384204864,
+      "validation_loss": 0.32116493055820466,
+      "training_accuracy": 0.89926,
+      "validation_accuracy": 0.8843
+    },
+    {
+      "epoch": 14,
+      "training_loss": 0.2664876535868645,
+      "validation_loss": 0.30977914645671845,
+      "training_accuracy": 0.90188,
+      "validation_accuracy": 0.8902
+    },
+    {
+      "epoch": 15,
+      "training_loss": 0.26008554314136506,
+      "validation_loss": 0.30624967834949496,
+      "training_accuracy": 0.90494,
+      "validation_accuracy": 0.8881
+    }
+  ],
+  "windows": [
+    {
+      "start_epoch": 6,
+      "end_epoch": 10,
+      "epochs": 5,
+      "mean_training_loss": 0.3296883755016327,
+      "mean_validation_loss": 0.3686533014988899,
+      "mean_validation_accuracy": 0.86342
+    },
+    {
+      "start_epoch": 11,
+      "end_epoch": 15,
+      "epochs": 5,
+      "mean_training_loss": 0.2750305432152748,
+      "mean_validation_loss": 0.3174048968493938,
+      "mean_validation_accuracy": 0.8859400000000001
+    }
+  ],
+  "later_minus_earlier": {
+    "mean_training_loss": -0.0546578322863579,
+    "mean_validation_loss": -0.05124840464949609,
+    "mean_validation_accuracy_percentage_points": 2.2520000000000095
+  },
+  "first_five_epoch_mean_for_context": {
+    "start_epoch": 1,
+    "end_epoch": 5,
+    "epochs": 5,
+    "mean_training_loss": 0.5518623214025498,
+    "mean_validation_loss": 0.5824268564462661,
+    "mean_validation_accuracy": 0.78372
+  },
+  "observations": {
+    "training_loss_decreases_every_epoch": true,
+    "validation_loss_increase_transitions": [
+      [
+        6,
+        7
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        12,
+        13
+      ]
+    ],
+    "validation_accuracy_decrease_transitions": [
+      [
+        6,
+        7
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        12,
+        13
+      ],
+      [
+        14,
+        15
+      ]
+    ],
+    "last_five_validation_accuracy_range": [
+      0.8783,
+      0.8902
+    ]
+  },
+  "interpretation": {
+    "training_loss": "Still decreasing.",
+    "validation": "Five-epoch averages improve, with individual epoch fluctuations.",
+    "overfitting": "No clear sustained validation deterioration in this record; transient changes alone do not establish overfitting.",
+    "stability": "Recent changes are smaller than early changes, but 15 epochs do not establish a stable plateau or convergence."
+  },
+  "mean_explanation": "Arithmetic means of per-epoch metrics; each epoch has the same sample count. These are time-window summaries, not one model or an ensemble score.",
+  "curve_file": "outputs/experiments/cnn_sgd_lr003_15epochs/cnn_history_analysis.png"
+}

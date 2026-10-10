@@ -1,0 +1,129 @@
+{
+  "checks": {
+    "fixed_validation_indices_match_seed_42": true,
+    "labels_match_official_training_labels": true,
+    "independent_confusion_matrix_matches": true,
+    "per_class_metrics_match": true,
+    "first_16_errors_match_fixed_order": true,
+    "top_five_directional_confusions_match": true,
+    "reload_metrics_match_best_epoch": true,
+    "strict_accuracy_checkpoint_selection_matches": true,
+    "all_epoch_counts_and_rates_match": true,
+    "training_time_matches_epoch_time_sum": true,
+    "first_five_epochs_reproduce_original_cnn": true,
+    "cnn_architecture_and_other_settings_unchanged": true,
+    "state_dict_loads_and_parameter_count_matches": true,
+    "all_png_files_readable": true,
+    "all_existing_artifacts_preserved": true,
+    "new_results_only_in_experiment_directory": true,
+    "source_syntax_valid": true,
+    "mac_open_completed_exit_code_zero": true
+  },
+  "preflight": {
+    "substantive_errors_found": false,
+    "train_loop": "train / zero_grad / forward / raw-logit CE / backward / step",
+    "validation": "eval and no_grad; no optimizer update",
+    "shirt_label": 6,
+    "pullover_label": 2
+  },
+  "best_epoch": 14,
+  "correct": 8695,
+  "errors": 1305,
+  "validation_accuracy": 0.8695,
+  "shirt_recall": 0.5062923523717329,
+  "shirt_to_pullover": 97,
+  "checkpoint_sha256": "ae5931704a808a74beb20806480f3b6fde8f2092595c3535d486fe6c2916222c",
+  "changed_existing_files": [
+    "PROGRESS.md",
+    "README.md",
+    "src/analyze_errors.py",
+    "src/compare_models.py",
+    "src/train.py"
+  ],
+  "unchanged_existing_files": [
+    "../../.gitignore",
+    ".DS_Store",
+    "data/FashionMNIST/raw/t10k-images-idx3-ubyte",
+    "data/FashionMNIST/raw/t10k-images-idx3-ubyte.gz",
+    "data/FashionMNIST/raw/t10k-labels-idx1-ubyte",
+    "data/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz",
+    "data/FashionMNIST/raw/train-images-idx3-ubyte",
+    "data/FashionMNIST/raw/train-images-idx3-ubyte.gz",
+    "data/FashionMNIST/raw/train-labels-idx1-ubyte",
+    "data/FashionMNIST/raw/train-labels-idx1-ubyte.gz",
+    "environment_check.png",
+    "outputs/.matplotlib/fontlist-v3.11.0.json",
+    "outputs/batch_samples.png",
+    "outputs/best_cnn.pt",
+    "outputs/best_mlp.pt",
+    "outputs/cnn_class_metrics.json",
+    "outputs/cnn_confusion_matrix.png",
+    "outputs/cnn_errors.png",
+    "outputs/cnn_training_curves.png",
+    "outputs/cnn_training_history.json",
+    "outputs/cnn_validation_predictions.json",
+    "outputs/cnn_validation_predictions.png",
+    "outputs/fashion_samples.png",
+    "outputs/mlp_class_metrics.json",
+    "outputs/mlp_cnn_comparison.json",
+    "outputs/mlp_cnn_comparison.png",
+    "outputs/mlp_confusion_matrix.png",
+    "outputs/mlp_errors.png",
+    "outputs/mlp_validation_predictions.json",
+    "outputs/one_step_predictions.png",
+    "outputs/training_curves.png",
+    "outputs/training_history.json",
+    "outputs/untrained_prediction.png",
+    "outputs/validation_predictions.png",
+    "src/check_cnn.py",
+    "src/check_data.py",
+    "src/check_model.py",
+    "src/cnn_model.py",
+    "src/data.py",
+    "src/demo_training_step.py",
+    "src/model.py",
+    "src/show_samples.py",
+    "src/train_one_step.py"
+  ],
+  "experiment_files": [
+    "best_cnn.pt",
+    "cnn_class_metrics.json",
+    "cnn_confusion_matrix.png",
+    "cnn_errors.png",
+    "cnn_training_curves.png",
+    "cnn_training_history.json",
+    "cnn_validation_predictions.json",
+    "cnn_validation_predictions.png",
+    "experiment_checks.json",
+    "model_comparison.json",
+    "model_comparison.png",
+    "shirt_recall.png"
+  ],
+  "image_sizes": {
+    "cnn_errors.png": [
+      2040,
+      2040
+    ],
+    "cnn_training_curves.png": [
+      1800,
+      675
+    ],
+    "shirt_recall.png": [
+      1350,
+      750
+    ],
+    "cnn_confusion_matrix.png": [
+      1800,
+      1500
+    ],
+    "cnn_validation_predictions.png": [
+      1350,
+      1350
+    ],
+    "model_comparison.png": [
+      1500,
+      750
+    ]
+  },
+  "limitations": "One fixed-seed CNN epoch-count experiment; no test set or automatic hyperparameter search."
+}

@@ -1,0 +1,204 @@
+{
+  "format_version": 1,
+  "weights_file": "model.pt",
+  "weights_sha256": "c972ca96c5d63c81998a6d884f57ebc42406f04a02c5368bdf1d01178d19a570",
+  "model": {
+    "name": "SimpleCNN",
+    "structure": "SimpleCNN(\n  (layers): Sequential(\n    (0): Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (1): ReLU()\n    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (3): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (4): ReLU()\n    (5): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (6): Flatten(start_dim=1, end_dim=-1)\n    (7): Linear(in_features=1568, out_features=64, bias=True)\n    (8): ReLU()\n    (9): Linear(in_features=64, out_features=10, bias=True)\n  )\n)",
+    "parameter_count": 105866
+  },
+  "class_names": [
+    "T-shirt/top",
+    "Trouser",
+    "Pullover",
+    "Dress",
+    "Coat",
+    "Sandal",
+    "Shirt",
+    "Sneaker",
+    "Bag",
+    "Ankle boot"
+  ],
+  "preprocessing": {
+    "name": "ToTensor",
+    "input_shape": [
+      1,
+      28,
+      28
+    ],
+    "dtype": "float32",
+    "pixel_range": [
+      0,
+      1
+    ],
+    "augmentation": null,
+    "normalization": null
+  },
+  "inference": {
+    "device": "cpu",
+    "model_mode": "eval",
+    "gradients": false,
+    "output": "10 raw class scores; argmax gives predicted class"
+  },
+  "selected_epoch": 52,
+  "selection_rule": "Higher validation accuracy; ties prefer lower validation loss; exact ties keep earlier.",
+  "selected_model_learning_rate_schedule": [
+    {
+      "epochs": [
+        1,
+        45
+      ],
+      "learning_rate": 0.03
+    },
+    {
+      "epochs": [
+        46,
+        52
+      ],
+      "learning_rate": 0.01
+    }
+  ],
+  "selected_model_parameter_updates": 40664,
+  "training_config": {
+    "model": {
+      "name": "SimpleCNN",
+      "structure": "SimpleCNN(\n  (layers): Sequential(\n    (0): Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (1): ReLU()\n    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (3): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (4): ReLU()\n    (5): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (6): Flatten(start_dim=1, end_dim=-1)\n    (7): Linear(in_features=1568, out_features=64, bias=True)\n    (8): ReLU()\n    (9): Linear(in_features=64, out_features=10, bias=True)\n  )\n)",
+      "parameter_count": 105866
+    },
+    "learning_rate": 0.01,
+    "optimizer": "SGD (momentum=0, weight_decay=0)",
+    "optimizer_defaults": {
+      "lr": 0.01,
+      "momentum": 0,
+      "dampening": 0,
+      "weight_decay": 0,
+      "nesterov": false,
+      "maximize": false,
+      "foreach": null,
+      "differentiable": false
+    },
+    "loss_function": "CrossEntropyLoss (raw logits, reduction=mean)",
+    "seed": 42,
+    "split_seed": 42,
+    "shuffle_seed": 42,
+    "preprocessing": "ToTensor() only",
+    "batch_size": 64,
+    "num_workers": 0,
+    "train_shuffle": true,
+    "validation_shuffle": false,
+    "drop_last": false,
+    "device": "cpu",
+    "cpu_threads": 6,
+    "epochs_requested": 60,
+    "train_samples": 50000,
+    "validation_samples": 10000,
+    "batches_per_epoch": 782,
+    "validation_batches": 157,
+    "train_indices_sha256": "a448c5b6b20079fc657a6c5eee8ec6b22bdd1f0c1e76c9655deb217485cf2bb5",
+    "validation_indices_sha256": "8b4a616012cc94d9f775db511b05b73f276f2e9d953702badc238b63249f225d",
+    "class_names": [
+      "T-shirt/top",
+      "Trouser",
+      "Pullover",
+      "Dress",
+      "Coat",
+      "Sandal",
+      "Shirt",
+      "Sneaker",
+      "Bag",
+      "Ankle boot"
+    ],
+    "scheduler": null,
+    "augmentation": null,
+    "python": "3.11.13",
+    "versions": {
+      "torch": "2.2.2",
+      "torchvision": "0.17.2",
+      "numpy": "1.26.4",
+      "matplotlib": "3.11.2"
+    },
+    "test_set_used": false,
+    "best_selection_rule": "Higher validation accuracy; ties prefer lower validation loss; exact ties keep earlier.",
+    "early_stopping": false
+  },
+  "original_training_config": {
+    "model": {
+      "name": "SimpleCNN",
+      "structure": "SimpleCNN(\n  (layers): Sequential(\n    (0): Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (1): ReLU()\n    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (3): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (4): ReLU()\n    (5): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (6): Flatten(start_dim=1, end_dim=-1)\n    (7): Linear(in_features=1568, out_features=64, bias=True)\n    (8): ReLU()\n    (9): Linear(in_features=64, out_features=10, bias=True)\n  )\n)",
+      "parameter_count": 105866
+    },
+    "learning_rate": 0.03,
+    "optimizer": "SGD (momentum=0, weight_decay=0)",
+    "optimizer_defaults": {
+      "lr": 0.03,
+      "momentum": 0,
+      "dampening": 0,
+      "weight_decay": 0,
+      "nesterov": false,
+      "maximize": false,
+      "foreach": null,
+      "differentiable": false
+    },
+    "loss_function": "CrossEntropyLoss (raw logits, reduction=mean)",
+    "seed": 42,
+    "split_seed": 42,
+    "shuffle_seed": 42,
+    "preprocessing": "ToTensor() only",
+    "batch_size": 64,
+    "num_workers": 0,
+    "train_shuffle": true,
+    "validation_shuffle": false,
+    "drop_last": false,
+    "device": "cpu",
+    "cpu_threads": 6,
+    "epochs_requested": 45,
+    "train_samples": 50000,
+    "validation_samples": 10000,
+    "batches_per_epoch": 782,
+    "validation_batches": 157,
+    "train_indices_sha256": "a448c5b6b20079fc657a6c5eee8ec6b22bdd1f0c1e76c9655deb217485cf2bb5",
+    "validation_indices_sha256": "8b4a616012cc94d9f775db511b05b73f276f2e9d953702badc238b63249f225d",
+    "class_names": [
+      "T-shirt/top",
+      "Trouser",
+      "Pullover",
+      "Dress",
+      "Coat",
+      "Sandal",
+      "Shirt",
+      "Sneaker",
+      "Bag",
+      "Ankle boot"
+    ],
+    "scheduler": null,
+    "augmentation": null,
+    "python": "3.11.13",
+    "versions": {
+      "torch": "2.2.2",
+      "torchvision": "0.17.2",
+      "numpy": "1.26.4",
+      "matplotlib": "3.11.2"
+    },
+    "test_set_used": false,
+    "best_selection_rule": "Higher validation accuracy; ties prefer lower validation loss; exact ties keep earlier."
+  },
+  "experiment_completed_epoch": 60,
+  "experiment_learning_rate_schedule": [
+    {
+      "epochs": [
+        1,
+        45
+      ],
+      "learning_rate": 0.03
+    },
+    {
+      "epochs": [
+        46,
+        60
+      ],
+      "learning_rate": 0.01
+    }
+  ],
+  "validation_metrics_file": "validation_metrics.json",
+  "test_metrics_file": "test_metrics.json"
+}

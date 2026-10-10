@@ -1,0 +1,345 @@
+{
+  "dataset": "FashionMNIST official test (train=False)",
+  "selected_epoch": 52,
+  "checkpoint_sha256": "c972ca96c5d63c81998a6d884f57ebc42406f04a02c5368bdf1d01178d19a570",
+  "loss": 0.2710733623552026,
+  "accuracy": 0.9165,
+  "correct": 9165,
+  "samples": 10000,
+  "batches": 157,
+  "errors": 835,
+  "class_names": [
+    "T-shirt/top",
+    "Trouser",
+    "Pullover",
+    "Dress",
+    "Coat",
+    "Sandal",
+    "Shirt",
+    "Sneaker",
+    "Bag",
+    "Ankle boot"
+  ],
+  "per_class": [
+    {
+      "label": 0,
+      "class_name": "T-shirt/top",
+      "support": 1000,
+      "predicted_count": 1015,
+      "correct": 876,
+      "false_positive": 139,
+      "false_negative": 124,
+      "precision": 0.8630541871921182,
+      "recall": 0.876,
+      "f1": 0.8694789081885856
+    },
+    {
+      "label": 1,
+      "class_name": "Trouser",
+      "support": 1000,
+      "predicted_count": 995,
+      "correct": 987,
+      "false_positive": 8,
+      "false_negative": 13,
+      "precision": 0.9919597989949749,
+      "recall": 0.987,
+      "f1": 0.9894736842105263
+    },
+    {
+      "label": 2,
+      "class_name": "Pullover",
+      "support": 1000,
+      "predicted_count": 986,
+      "correct": 855,
+      "false_positive": 131,
+      "false_negative": 145,
+      "precision": 0.8671399594320487,
+      "recall": 0.855,
+      "f1": 0.8610271903323263
+    },
+    {
+      "label": 3,
+      "class_name": "Dress",
+      "support": 1000,
+      "predicted_count": 994,
+      "correct": 917,
+      "false_positive": 77,
+      "false_negative": 83,
+      "precision": 0.9225352112676056,
+      "recall": 0.917,
+      "f1": 0.9197592778335005
+    },
+    {
+      "label": 4,
+      "class_name": "Coat",
+      "support": 1000,
+      "predicted_count": 1032,
+      "correct": 876,
+      "false_positive": 156,
+      "false_negative": 124,
+      "precision": 0.8488372093023255,
+      "recall": 0.876,
+      "f1": 0.8622047244094488
+    },
+    {
+      "label": 5,
+      "class_name": "Sandal",
+      "support": 1000,
+      "predicted_count": 1003,
+      "correct": 981,
+      "false_positive": 22,
+      "false_negative": 19,
+      "precision": 0.9780658025922233,
+      "recall": 0.981,
+      "f1": 0.9795307039440839
+    },
+    {
+      "label": 6,
+      "class_name": "Shirt",
+      "support": 1000,
+      "predicted_count": 968,
+      "correct": 756,
+      "false_positive": 212,
+      "false_negative": 244,
+      "precision": 0.78099173553719,
+      "recall": 0.756,
+      "f1": 0.7682926829268293
+    },
+    {
+      "label": 7,
+      "class_name": "Sneaker",
+      "support": 1000,
+      "predicted_count": 1002,
+      "correct": 963,
+      "false_positive": 39,
+      "false_negative": 37,
+      "precision": 0.9610778443113772,
+      "recall": 0.963,
+      "f1": 0.962037962037962
+    },
+    {
+      "label": 8,
+      "class_name": "Bag",
+      "support": 1000,
+      "predicted_count": 1004,
+      "correct": 987,
+      "false_positive": 17,
+      "false_negative": 13,
+      "precision": 0.9830677290836654,
+      "recall": 0.987,
+      "f1": 0.9850299401197605
+    },
+    {
+      "label": 9,
+      "class_name": "Ankle boot",
+      "support": 1000,
+      "predicted_count": 1001,
+      "correct": 967,
+      "false_positive": 34,
+      "false_negative": 33,
+      "precision": 0.9660339660339661,
+      "recall": 0.967,
+      "f1": 0.9665167416291854
+    }
+  ],
+  "confusion_matrix": [
+    [
+      876,
+      0,
+      15,
+      15,
+      2,
+      2,
+      85,
+      0,
+      4,
+      1
+    ],
+    [
+      0,
+      987,
+      1,
+      8,
+      2,
+      0,
+      2,
+      0,
+      0,
+      0
+    ],
+    [
+      20,
+      1,
+      855,
+      5,
+      62,
+      0,
+      56,
+      0,
+      1,
+      0
+    ],
+    [
+      14,
+      4,
+      13,
+      917,
+      29,
+      0,
+      19,
+      0,
+      4,
+      0
+    ],
+    [
+      2,
+      1,
+      47,
+      23,
+      876,
+      1,
+      48,
+      0,
+      2,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      981,
+      0,
+      13,
+      0,
+      5
+    ],
+    [
+      97,
+      2,
+      55,
+      24,
+      60,
+      0,
+      756,
+      0,
+      6,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      10,
+      0,
+      963,
+      0,
+      27
+    ],
+    [
+      5,
+      0,
+      0,
+      2,
+      1,
+      1,
+      1,
+      2,
+      987,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      8,
+      1,
+      24,
+      0,
+      967
+    ]
+  ],
+  "matrix_axes": {
+    "rows": "true",
+    "columns": "predicted"
+  },
+  "shirt_recall": 0.756,
+  "shirt_to_pullover": 55,
+  "top_five_confusions": [
+    {
+      "true_label": 6,
+      "true_class": "Shirt",
+      "predicted_label": 0,
+      "predicted_class": "T-shirt/top",
+      "count": 97
+    },
+    {
+      "true_label": 0,
+      "true_class": "T-shirt/top",
+      "predicted_label": 6,
+      "predicted_class": "Shirt",
+      "count": 85
+    },
+    {
+      "true_label": 2,
+      "true_class": "Pullover",
+      "predicted_label": 4,
+      "predicted_class": "Coat",
+      "count": 62
+    },
+    {
+      "true_label": 6,
+      "true_class": "Shirt",
+      "predicted_label": 4,
+      "predicted_class": "Coat",
+      "count": 60
+    },
+    {
+      "true_label": 2,
+      "true_class": "Pullover",
+      "predicted_label": 6,
+      "predicted_class": "Shirt",
+      "count": 56
+    }
+  ],
+  "macro_average": {
+    "precision": 0.9162763443747496,
+    "recall": 0.9164999999999999,
+    "f1": 0.9163351815632209
+  },
+  "weighted_average": {
+    "precision": 0.9162763443747496,
+    "recall": 0.9165,
+    "f1": 0.9163351815632208
+  },
+  "zero_denominator_policy": "precision/recall/F1分母为0时记0；本次10类均有样本和预测。",
+  "validation_same_checkpoint": {
+    "loss": 0.26007638668715954,
+    "accuracy": 0.9166,
+    "correct": 9166,
+    "samples": 10000,
+    "batches": 157,
+    "class_recall": {
+      "label": 6,
+      "total": 1033,
+      "correct": 783,
+      "recall": 0.7579864472410455
+    }
+  },
+  "test_minus_validation_accuracy_percentage_points": -0.009999999999998899,
+  "parameter_updates_during_evaluation": 0,
+  "test_used_for_model_selection": false,
+  "limitations": [
+    "单一固定随机轨迹，未做多种子重复实验。",
+    "验证集经过多次调参选择，验证成绩与测试成绩应分开报告。",
+    "仅评估FashionMNIST的28×28灰度小图，不能证明对真实服装照片有效。",
+    "错误图片用于说明主要错误方向，不能代表其出现频率。",
+    "网页与二维分拣暂缓；本次测试只用于最终报告，不据此继续调参。"
+  ],
+  "evaluation_seconds": 6.035274912006571
+}

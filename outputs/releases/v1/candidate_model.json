@@ -1,0 +1,68 @@
+{
+  "selection_rule": "Highest best validation accuracy; ties prefer lower loss from the same saved epoch.",
+  "within_experiment_rule": "Save on strictly higher validation accuracy; ties keep earlier epoch.",
+  "checkpoint": "outputs/experiments/cnn_sgd_lr003_15epochs/best_cnn.pt",
+  "checkpoint_sha256": "8dd026b17e7dc2033d0c8b6e444ecb005a4a69c99b20ef4d85d15d0425de1e85",
+  "best_epoch": 14,
+  "config": {
+    "model": {
+      "name": "SimpleCNN",
+      "structure": "SimpleCNN(\n  (layers): Sequential(\n    (0): Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (1): ReLU()\n    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (3): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (4): ReLU()\n    (5): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (6): Flatten(start_dim=1, end_dim=-1)\n    (7): Linear(in_features=1568, out_features=64, bias=True)\n    (8): ReLU()\n    (9): Linear(in_features=64, out_features=10, bias=True)\n  )\n)",
+      "parameter_count": 105866
+    },
+    "seed": 42,
+    "split_seed": 42,
+    "shuffle_seed": 42,
+    "preprocessing": "ToTensor() only",
+    "initialization": "Fresh model, optimizer and DataLoader; no checkpoint resume",
+    "optimizer": "SGD (momentum=0, weight_decay=0)",
+    "loss_function": "CrossEntropyLoss (raw logits, reduction=mean)",
+    "batch_size": 64,
+    "num_workers": 0,
+    "device": "cpu",
+    "cpu_threads": 6,
+    "epochs_requested": 15,
+    "train_samples": 50000,
+    "validation_samples": 10000,
+    "batches_per_epoch": 782,
+    "validation_batches": 157,
+    "python": "3.11.13",
+    "versions": {
+      "torch": "2.2.2",
+      "torchvision": "0.17.2",
+      "numpy": "1.26.4",
+      "matplotlib": "3.11.2"
+    },
+    "class_names": [
+      "T-shirt/top",
+      "Trouser",
+      "Pullover",
+      "Dress",
+      "Coat",
+      "Sandal",
+      "Shirt",
+      "Sneaker",
+      "Bag",
+      "Ankle boot"
+    ],
+    "test_set_used": false
+  },
+  "learning_rate": 0.03,
+  "validation_metrics": {
+    "loss": 0.30977914645671845,
+    "accuracy": 0.8902,
+    "correct": 8902,
+    "samples": 10000,
+    "batches": 157,
+    "class_recall": {
+      "label": 6,
+      "total": 1033,
+      "correct": 553,
+      "recall": 0.5353339787028074
+    }
+  },
+  "shirt_to_pullover": 88,
+  "source_history": "outputs/experiments/cnn_sgd_lr003_15epochs/cnn_training_history.json",
+  "test_set_used": false,
+  "scope": "Candidate chosen from these three fixed-seed validation experiments; stop tuning here."
+}

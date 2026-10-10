@@ -1,0 +1,4011 @@
+{
+  "model": {
+    "name": "SimpleCNN",
+    "structure": "SimpleCNN(\n  (layers): Sequential(\n    (0): Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (1): ReLU()\n    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (3): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (4): ReLU()\n    (5): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (6): Flatten(start_dim=1, end_dim=-1)\n    (7): Linear(in_features=1568, out_features=64, bias=True)\n    (8): ReLU()\n    (9): Linear(in_features=64, out_features=10, bias=True)\n  )\n)",
+    "parameter_count": 105866
+  },
+  "learning_rate": 0.03,
+  "optimizer": "SGD (momentum=0, weight_decay=0)",
+  "optimizer_defaults": {
+    "lr": 0.03,
+    "momentum": 0,
+    "dampening": 0,
+    "weight_decay": 0,
+    "nesterov": false,
+    "maximize": false,
+    "foreach": null,
+    "differentiable": false
+  },
+  "loss_function": "CrossEntropyLoss (raw logits, reduction=mean)",
+  "seed": 42,
+  "split_seed": 42,
+  "shuffle_seed": 42,
+  "preprocessing": "ToTensor() only",
+  "batch_size": 64,
+  "num_workers": 0,
+  "train_shuffle": true,
+  "validation_shuffle": false,
+  "drop_last": false,
+  "device": "cpu",
+  "cpu_threads": 6,
+  "epochs_requested": 60,
+  "train_samples": 50000,
+  "validation_samples": 10000,
+  "batches_per_epoch": 782,
+  "validation_batches": 157,
+  "train_indices_sha256": "a448c5b6b20079fc657a6c5eee8ec6b22bdd1f0c1e76c9655deb217485cf2bb5",
+  "validation_indices_sha256": "8b4a616012cc94d9f775db511b05b73f276f2e9d953702badc238b63249f225d",
+  "class_names": [
+    "T-shirt/top",
+    "Trouser",
+    "Pullover",
+    "Dress",
+    "Coat",
+    "Sandal",
+    "Shirt",
+    "Sneaker",
+    "Bag",
+    "Ankle boot"
+  ],
+  "scheduler": null,
+  "augmentation": null,
+  "python": "3.11.13",
+  "versions": {
+    "torch": "2.2.2",
+    "torchvision": "0.17.2",
+    "numpy": "1.26.4",
+    "matplotlib": "3.11.2"
+  },
+  "test_set_used": false,
+  "best_selection_rule": "Higher validation accuracy; ties prefer lower validation loss; exact ties keep earlier.",
+  "config": {
+    "model": {
+      "name": "SimpleCNN",
+      "structure": "SimpleCNN(\n  (layers): Sequential(\n    (0): Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (1): ReLU()\n    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (3): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (4): ReLU()\n    (5): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (6): Flatten(start_dim=1, end_dim=-1)\n    (7): Linear(in_features=1568, out_features=64, bias=True)\n    (8): ReLU()\n    (9): Linear(in_features=64, out_features=10, bias=True)\n  )\n)",
+      "parameter_count": 105866
+    },
+    "learning_rate": 0.03,
+    "optimizer": "SGD (momentum=0, weight_decay=0)",
+    "optimizer_defaults": {
+      "lr": 0.03,
+      "momentum": 0,
+      "dampening": 0,
+      "weight_decay": 0,
+      "nesterov": false,
+      "maximize": false,
+      "foreach": null,
+      "differentiable": false
+    },
+    "loss_function": "CrossEntropyLoss (raw logits, reduction=mean)",
+    "seed": 42,
+    "split_seed": 42,
+    "shuffle_seed": 42,
+    "preprocessing": "ToTensor() only",
+    "batch_size": 64,
+    "num_workers": 0,
+    "train_shuffle": true,
+    "validation_shuffle": false,
+    "drop_last": false,
+    "device": "cpu",
+    "cpu_threads": 6,
+    "epochs_requested": 60,
+    "train_samples": 50000,
+    "validation_samples": 10000,
+    "batches_per_epoch": 782,
+    "validation_batches": 157,
+    "train_indices_sha256": "a448c5b6b20079fc657a6c5eee8ec6b22bdd1f0c1e76c9655deb217485cf2bb5",
+    "validation_indices_sha256": "8b4a616012cc94d9f775db511b05b73f276f2e9d953702badc238b63249f225d",
+    "class_names": [
+      "T-shirt/top",
+      "Trouser",
+      "Pullover",
+      "Dress",
+      "Coat",
+      "Sandal",
+      "Shirt",
+      "Sneaker",
+      "Bag",
+      "Ankle boot"
+    ],
+    "scheduler": null,
+    "augmentation": null,
+    "python": "3.11.13",
+    "versions": {
+      "torch": "2.2.2",
+      "torchvision": "0.17.2",
+      "numpy": "1.26.4",
+      "matplotlib": "3.11.2"
+    },
+    "test_set_used": false,
+    "best_selection_rule": "Higher validation accuracy; ties prefer lower validation loss; exact ties keep earlier."
+  },
+  "status": "completed",
+  "epochs": [
+    {
+      "epoch": 1,
+      "train": {
+        "loss": 0.934059836025238,
+        "accuracy": 0.65652,
+        "correct": 32826,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.8609950009346008,
+        "accuracy": 0.6813,
+        "correct": 6813,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 344,
+          "recall": 0.3330106485963214
+        }
+      },
+      "seconds": 15.20406470700982,
+      "saved_as_best": true,
+      "sample_order": {
+        "sha256": "0496c3027217bae63fdd1dc5c88139e40a01712a79431f94ff4d471b49226f11",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          3881,
+          17627,
+          9733,
+          26463,
+          32088,
+          6321,
+          9483,
+          22526,
+          46318,
+          39054,
+          49172,
+          35558,
+          29215,
+          53779,
+          25299,
+          46914
+        ],
+        "last_16": [
+          10817,
+          1998,
+          39260,
+          32229,
+          36798,
+          38826,
+          8045,
+          56096,
+          4901,
+          22836,
+          20482,
+          17771,
+          39815,
+          17034,
+          13974,
+          28876
+        ]
+      },
+      "loader_state_before_sha256": "5feb54a46230d321d888e9b43cf5a57492665f199e4377408d79ee460e36679c",
+      "loader_state_after_sha256": "490c44bdc2875a27255623958f10590dff9cbeaf588e224aee4fbb496547c096"
+    },
+    {
+      "epoch": 2,
+      "train": {
+        "loss": 0.555522425327301,
+        "accuracy": 0.79192,
+        "correct": 39596,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.645449709701538,
+        "accuracy": 0.7499,
+        "correct": 7499,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 269,
+          "recall": 0.26040658276863504
+        }
+      },
+      "seconds": 15.9306173530058,
+      "saved_as_best": true,
+      "sample_order": {
+        "sha256": "e3af1d52e23853c7796aec01b91f6c58af3fa7082bc0ea18c5e5b2804b42aaef",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          6618,
+          798,
+          14081,
+          45737,
+          29319,
+          26748,
+          58506,
+          54750,
+          3780,
+          9855,
+          35212,
+          20164,
+          20003,
+          2155,
+          219,
+          55663
+        ],
+        "last_16": [
+          38402,
+          7319,
+          19898,
+          2210,
+          29858,
+          58139,
+          25033,
+          48075,
+          41552,
+          42076,
+          1350,
+          25136,
+          51691,
+          51040,
+          57517,
+          44345
+        ]
+      },
+      "loader_state_before_sha256": "490c44bdc2875a27255623958f10590dff9cbeaf588e224aee4fbb496547c096",
+      "loader_state_after_sha256": "d72c64aa3be0895836936b3071c1cdb5fe43b588b20bef45634c05ba08c2cab7"
+    },
+    {
+      "epoch": 3,
+      "train": {
+        "loss": 0.4670408585500717,
+        "accuracy": 0.82742,
+        "correct": 41371,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.5125525556564331,
+        "accuracy": 0.8071,
+        "correct": 8071,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 419,
+          "recall": 0.40561471442400776
+        }
+      },
+      "seconds": 17.168584760001977,
+      "saved_as_best": true,
+      "sample_order": {
+        "sha256": "7a0b45f96fd0f383907da71d68df064dfc9cf5b7140ecbf48597144a2e777896",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          31614,
+          10187,
+          26663,
+          40664,
+          534,
+          26165,
+          17704,
+          21583,
+          32174,
+          6297,
+          40742,
+          47502,
+          44552,
+          2021,
+          34984,
+          56746
+        ],
+        "last_16": [
+          51416,
+          47617,
+          48504,
+          54022,
+          55339,
+          27143,
+          7088,
+          57339,
+          47376,
+          31107,
+          35562,
+          51977,
+          14553,
+          16942,
+          59037,
+          50810
+        ]
+      },
+      "loader_state_before_sha256": "d72c64aa3be0895836936b3071c1cdb5fe43b588b20bef45634c05ba08c2cab7",
+      "loader_state_after_sha256": "44553126fde0fdcad43cf0d4f95c684f2e99cb9f106e09c11e10be84390fac30"
+    },
+    {
+      "epoch": 4,
+      "train": {
+        "loss": 0.4185050809288025,
+        "accuracy": 0.84574,
+        "correct": 42287,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.45781862936019896,
+        "accuracy": 0.8361,
+        "correct": 8361,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 359,
+          "recall": 0.3475314617618587
+        }
+      },
+      "seconds": 16.524422970993328,
+      "saved_as_best": true,
+      "sample_order": {
+        "sha256": "39d37e6569b3a1511df2006fa9d4bf4f0e31220e67ca0b19d4d4575ec13e93c9",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          13149,
+          55489,
+          44915,
+          15060,
+          46114,
+          44273,
+          43410,
+          10347,
+          22230,
+          8053,
+          402,
+          11283,
+          20441,
+          34331,
+          56100,
+          31777
+        ],
+        "last_16": [
+          590,
+          53624,
+          36132,
+          10668,
+          9267,
+          38749,
+          37643,
+          39112,
+          7980,
+          54609,
+          9818,
+          57685,
+          27976,
+          7356,
+          24340,
+          49003
+        ]
+      },
+      "loader_state_before_sha256": "44553126fde0fdcad43cf0d4f95c684f2e99cb9f106e09c11e10be84390fac30",
+      "loader_state_after_sha256": "0ab95dde9e4069f0f2421ea53864e42cf9f520e086da046bfbecf006168ed7ba"
+    },
+    {
+      "epoch": 5,
+      "train": {
+        "loss": 0.38418340618133545,
+        "accuracy": 0.85926,
+        "correct": 42963,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.43531838657855987,
+        "accuracy": 0.8442,
+        "correct": 8442,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 433,
+          "recall": 0.4191674733785092
+        }
+      },
+      "seconds": 17.544150725996587,
+      "saved_as_best": true,
+      "sample_order": {
+        "sha256": "f84d9baf287f729ac882790c7f25cc708956fc7e410c8be1d277a9d44b6fd15d",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          15949,
+          42540,
+          41116,
+          46279,
+          54860,
+          48279,
+          16946,
+          29027,
+          5925,
+          47576,
+          21845,
+          42813,
+          7992,
+          440,
+          3782,
+          48387
+        ],
+        "last_16": [
+          17503,
+          34790,
+          2261,
+          58140,
+          4240,
+          39501,
+          35101,
+          53179,
+          14707,
+          55223,
+          19011,
+          18818,
+          24593,
+          18852,
+          35003,
+          45013
+        ]
+      },
+      "loader_state_before_sha256": "0ab95dde9e4069f0f2421ea53864e42cf9f520e086da046bfbecf006168ed7ba",
+      "loader_state_after_sha256": "cacc711501fa6259dfa406dc527dee612f6e717e92218b87571586340809221e"
+    },
+    {
+      "epoch": 6,
+      "train": {
+        "loss": 0.36117810238838194,
+        "accuracy": 0.8692,
+        "correct": 43460,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.3998544209361076,
+        "accuracy": 0.8491,
+        "correct": 8491,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 855,
+          "recall": 0.8276863504356244
+        }
+      },
+      "seconds": 16.42092301401135,
+      "saved_as_best": true,
+      "sample_order": {
+        "sha256": "928eb1b9ceea5ea4a5d4a92cdd74f2aac0dc35eeb993e7fb81ce349cc0c4f6e4",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          26320,
+          22041,
+          50232,
+          34094,
+          49635,
+          57817,
+          23202,
+          36805,
+          41186,
+          45783,
+          43197,
+          50871,
+          54605,
+          11890,
+          29170,
+          18142
+        ],
+        "last_16": [
+          38373,
+          2776,
+          46023,
+          53325,
+          34640,
+          46898,
+          47997,
+          51870,
+          58560,
+          30043,
+          38590,
+          594,
+          36835,
+          35477,
+          21517,
+          9200
+        ]
+      },
+      "loader_state_before_sha256": "cacc711501fa6259dfa406dc527dee612f6e717e92218b87571586340809221e",
+      "loader_state_after_sha256": "3b640bc7724ca1510bfc9e50ccbf6b80af2175ef4c1d7ef0e31c209094dc9e29"
+    },
+    {
+      "epoch": 7,
+      "train": {
+        "loss": 0.342339763469696,
+        "accuracy": 0.87506,
+        "correct": 43753,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.42143602874279024,
+        "accuracy": 0.838,
+        "correct": 8380,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 543,
+          "recall": 0.5256534365924492
+        }
+      },
+      "seconds": 16.91965876299946,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "259eb8d5d3d68fad5e222a17eaed61e5de5276a440fc910238022bcddc8ef4f1",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          14212,
+          35669,
+          59774,
+          9397,
+          18766,
+          2847,
+          37892,
+          56360,
+          33952,
+          54622,
+          25866,
+          51972,
+          12065,
+          10522,
+          40884,
+          25531
+        ],
+        "last_16": [
+          40582,
+          53691,
+          10372,
+          9430,
+          54914,
+          20874,
+          29867,
+          13091,
+          35058,
+          6429,
+          56285,
+          37826,
+          31030,
+          1103,
+          53726,
+          23557
+        ]
+      },
+      "loader_state_before_sha256": "3b640bc7724ca1510bfc9e50ccbf6b80af2175ef4c1d7ef0e31c209094dc9e29",
+      "loader_state_after_sha256": "c0170c08ad2f7f8c8be07ecf999c9c50d713f98d8bfd1ecc84ed60f7c44de711"
+    },
+    {
+      "epoch": 8,
+      "train": {
+        "loss": 0.3267833288192749,
+        "accuracy": 0.88016,
+        "correct": 44008,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.3438902441263199,
+        "accuracy": 0.875,
+        "correct": 8750,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 757,
+          "recall": 0.7328170377541142
+        }
+      },
+      "seconds": 15.737092786002904,
+      "saved_as_best": true,
+      "sample_order": {
+        "sha256": "39eafec7aa592ebbf4c76dc200da389ba1c069a79162e77643b14820298c3d89",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          43573,
+          53380,
+          7810,
+          23778,
+          55629,
+          2980,
+          9392,
+          8932,
+          55417,
+          36323,
+          51817,
+          1870,
+          6291,
+          38049,
+          26863,
+          7995
+        ],
+        "last_16": [
+          48670,
+          1528,
+          17692,
+          54431,
+          14460,
+          1136,
+          23152,
+          3410,
+          44026,
+          39399,
+          8709,
+          57835,
+          54511,
+          49757,
+          3181,
+          21257
+        ]
+      },
+      "loader_state_before_sha256": "c0170c08ad2f7f8c8be07ecf999c9c50d713f98d8bfd1ecc84ed60f7c44de711",
+      "loader_state_after_sha256": "9cd7a2634fd810ef1a2d3f289533247e10c579df3e7bdd25ead6fe2f7b9d6438"
+    },
+    {
+      "epoch": 9,
+      "train": {
+        "loss": 0.31483594964981076,
+        "accuracy": 0.885,
+        "correct": 44250,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.347857377910614,
+        "accuracy": 0.8742,
+        "correct": 8742,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 474,
+          "recall": 0.45885769603097776
+        }
+      },
+      "seconds": 15.85295585199492,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "bcdbd099d45fdc3d7288e7dae841a3666a638d1387a8b4e0fe1581648311f421",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          5912,
+          10478,
+          40081,
+          496,
+          26037,
+          9025,
+          26214,
+          8977,
+          35087,
+          51344,
+          5600,
+          49748,
+          47030,
+          2542,
+          1734,
+          665
+        ],
+        "last_16": [
+          49510,
+          32318,
+          50234,
+          38720,
+          25299,
+          54786,
+          44875,
+          24944,
+          49475,
+          44945,
+          45783,
+          15109,
+          10788,
+          9498,
+          59023,
+          34422
+        ]
+      },
+      "loader_state_before_sha256": "9cd7a2634fd810ef1a2d3f289533247e10c579df3e7bdd25ead6fe2f7b9d6438",
+      "loader_state_after_sha256": "de6c97661409304c9126a4845ab83f112545d6faf926f5d9ff12f604dadd0338"
+    },
+    {
+      "epoch": 10,
+      "train": {
+        "loss": 0.30330473318099976,
+        "accuracy": 0.8887,
+        "correct": 44435,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.3302284357786179,
+        "accuracy": 0.8808,
+        "correct": 8808,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 640,
+          "recall": 0.6195546950629235
+        }
+      },
+      "seconds": 15.685997570995823,
+      "saved_as_best": true,
+      "sample_order": {
+        "sha256": "dde383c4d66fe01511d0f166c0264314c1d6be63f38781288f5e59f1c991db5e",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          24976,
+          43006,
+          38109,
+          18205,
+          41200,
+          21564,
+          4523,
+          30891,
+          56220,
+          58449,
+          19265,
+          26093,
+          38260,
+          31612,
+          33395,
+          41518
+        ],
+        "last_16": [
+          38293,
+          36492,
+          1659,
+          54673,
+          11729,
+          53943,
+          13859,
+          46958,
+          58935,
+          24601,
+          31376,
+          57021,
+          41758,
+          5921,
+          20937,
+          58696
+        ]
+      },
+      "loader_state_before_sha256": "de6c97661409304c9126a4845ab83f112545d6faf926f5d9ff12f604dadd0338",
+      "loader_state_after_sha256": "8ad841ab17195274c932de8bcac7f0b4714973302a6d0637c0ca607f2d45fc72"
+    },
+    {
+      "epoch": 11,
+      "train": {
+        "loss": 0.29142543429374695,
+        "accuracy": 0.89348,
+        "correct": 44674,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.3362250345230103,
+        "accuracy": 0.8783,
+        "correct": 8783,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 679,
+          "recall": 0.6573088092933205
+        }
+      },
+      "seconds": 16.043818909005495,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "dd179435e68fffb9bca73ec586e18427fcbd363f213bfe19b9d97e67c3d8ec64",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          32195,
+          15937,
+          21983,
+          20874,
+          50354,
+          7043,
+          28047,
+          587,
+          58113,
+          38573,
+          25227,
+          20497,
+          10865,
+          58652,
+          1147,
+          12000
+        ],
+        "last_16": [
+          40129,
+          10012,
+          15994,
+          26892,
+          53984,
+          3922,
+          50909,
+          15950,
+          54893,
+          5361,
+          24126,
+          55084,
+          8915,
+          44664,
+          2016,
+          24096
+        ]
+      },
+      "loader_state_before_sha256": "8ad841ab17195274c932de8bcac7f0b4714973302a6d0637c0ca607f2d45fc72",
+      "loader_state_after_sha256": "3f754ac36ebdf185516e21a175c3e25e4292ee28619e7f50b51f5fe7b8cefa49"
+    },
+    {
+      "epoch": 12,
+      "train": {
+        "loss": 0.2825342612123489,
+        "accuracy": 0.8958,
+        "correct": 44790,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.31360569435954094,
+        "accuracy": 0.8888,
+        "correct": 8888,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 711,
+          "recall": 0.6882865440464666
+        }
+      },
+      "seconds": 15.876422966000973,
+      "saved_as_best": true,
+      "sample_order": {
+        "sha256": "eaeb0bba381b367cb3729a3a0fbdab5ff2e15e8eb49e63a1801f0d40d7ba593d",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          3691,
+          50466,
+          18067,
+          32332,
+          14500,
+          100,
+          12406,
+          5149,
+          48638,
+          28540,
+          26565,
+          16325,
+          26607,
+          20637,
+          11719,
+          8708
+        ],
+        "last_16": [
+          19465,
+          54230,
+          33524,
+          4659,
+          59095,
+          9818,
+          55504,
+          16088,
+          58455,
+          23152,
+          3687,
+          48873,
+          32438,
+          24047,
+          19390,
+          24392
+        ]
+      },
+      "loader_state_before_sha256": "3f754ac36ebdf185516e21a175c3e25e4292ee28619e7f50b51f5fe7b8cefa49",
+      "loader_state_after_sha256": "f2fbed9bdb6cecb392998c1a784dbf17cfc4dc4c14dec5d41afcb0bc2a4c4e78"
+    },
+    {
+      "epoch": 13,
+      "train": {
+        "loss": 0.27461982384204864,
+        "accuracy": 0.89926,
+        "correct": 44963,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.32116493055820466,
+        "accuracy": 0.8843,
+        "correct": 8843,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 538,
+          "recall": 0.5208131655372701
+        }
+      },
+      "seconds": 15.744889574998524,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "925dfdc6b4ad718759af045ac9d74a41fe92ec2d285cef2f2d40ec25c3b3a87d",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          20037,
+          7227,
+          38919,
+          16891,
+          55943,
+          43691,
+          5412,
+          37442,
+          9634,
+          30869,
+          46545,
+          20231,
+          16566,
+          16550,
+          8764,
+          53961
+        ],
+        "last_16": [
+          13885,
+          20117,
+          25617,
+          9026,
+          16623,
+          20430,
+          45985,
+          9204,
+          48348,
+          55616,
+          36087,
+          57094,
+          10844,
+          22033,
+          25588,
+          18529
+        ]
+      },
+      "loader_state_before_sha256": "f2fbed9bdb6cecb392998c1a784dbf17cfc4dc4c14dec5d41afcb0bc2a4c4e78",
+      "loader_state_after_sha256": "f02aa11f13e44d581c86efdff98040896bf961098c6666aa8a635dbe7eec286f"
+    },
+    {
+      "epoch": 14,
+      "train": {
+        "loss": 0.2664876535868645,
+        "accuracy": 0.90188,
+        "correct": 45094,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.30977914645671845,
+        "accuracy": 0.8902,
+        "correct": 8902,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 553,
+          "recall": 0.5353339787028074
+        }
+      },
+      "seconds": 16.21810744999675,
+      "saved_as_best": true,
+      "sample_order": {
+        "sha256": "a5137f3ab1bf730650db1cfa326595303b5b4e2a5b6b2265cc89ae76fa7412a7",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          51559,
+          29909,
+          8012,
+          407,
+          2789,
+          1145,
+          26009,
+          5295,
+          54020,
+          58483,
+          39441,
+          14973,
+          47878,
+          59864,
+          53410,
+          58435
+        ],
+        "last_16": [
+          54842,
+          12450,
+          51436,
+          29563,
+          41337,
+          44886,
+          25207,
+          36551,
+          36444,
+          21570,
+          9203,
+          19454,
+          30832,
+          1178,
+          1385,
+          36490
+        ]
+      },
+      "loader_state_before_sha256": "f02aa11f13e44d581c86efdff98040896bf961098c6666aa8a635dbe7eec286f",
+      "loader_state_after_sha256": "d6daf6309fd9875d9957a2271a44720da1bc70701af36257e02684aad088dc0d"
+    },
+    {
+      "epoch": 15,
+      "train": {
+        "loss": 0.26008554314136506,
+        "accuracy": 0.90494,
+        "correct": 45247,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.30624967834949496,
+        "accuracy": 0.8881,
+        "correct": 8881,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 711,
+          "recall": 0.6882865440464666
+        }
+      },
+      "seconds": 15.617778047992033,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "c645cc3b153855eb98a80c7ef3ca57dac34e7821708e97b9be0f13a590ecaaf3",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          40491,
+          20109,
+          28627,
+          55219,
+          48143,
+          4337,
+          9230,
+          28339,
+          13259,
+          15163,
+          6701,
+          13810,
+          32783,
+          11123,
+          54779,
+          3335
+        ],
+        "last_16": [
+          50855,
+          28995,
+          29841,
+          38456,
+          35777,
+          52973,
+          7517,
+          929,
+          55846,
+          50505,
+          18874,
+          5084,
+          14593,
+          4157,
+          39570,
+          7492
+        ]
+      },
+      "loader_state_before_sha256": "d6daf6309fd9875d9957a2271a44720da1bc70701af36257e02684aad088dc0d",
+      "loader_state_after_sha256": "b91fcb7e8b6d8ad810f5bcb1fe5f5f7542a85d384e137d765171d9c4ebe35577"
+    },
+    {
+      "epoch": 16,
+      "train": {
+        "loss": 0.2526964279270172,
+        "accuracy": 0.90608,
+        "correct": 45304,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.2787883755207062,
+        "accuracy": 0.8994,
+        "correct": 8994,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 712,
+          "recall": 0.6892545982575025
+        }
+      },
+      "seconds": 15.765057179989526,
+      "saved_as_best": true,
+      "sample_order": {
+        "sha256": "4c9644446eb795a7fb776869c4b408e6e5dc206c4404b81ff8fd349453f0660b",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          39365,
+          45984,
+          42144,
+          11970,
+          52276,
+          58177,
+          32924,
+          18054,
+          13170,
+          47450,
+          21607,
+          48865,
+          59679,
+          39546,
+          6668,
+          54313
+        ],
+        "last_16": [
+          39000,
+          19107,
+          55758,
+          57951,
+          9039,
+          25368,
+          43641,
+          33722,
+          2464,
+          14955,
+          54414,
+          45623,
+          36057,
+          30413,
+          31393,
+          33906
+        ]
+      },
+      "loader_state_before_sha256": "b91fcb7e8b6d8ad810f5bcb1fe5f5f7542a85d384e137d765171d9c4ebe35577",
+      "loader_state_after_sha256": "9394c4ba69d83f1ef31191e02a1140a9dc116b0e59e2987d808c74d72ea9bc0c"
+    },
+    {
+      "epoch": 17,
+      "train": {
+        "loss": 0.24807145278930665,
+        "accuracy": 0.90844,
+        "correct": 45422,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.3117679127752781,
+        "accuracy": 0.8855,
+        "correct": 8855,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 786,
+          "recall": 0.7608906098741529
+        }
+      },
+      "seconds": 18.04196563300502,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "51a8571b66c0a56af11c0c2c5cf8762995b7cfc15d72fd285e0959c599282f94",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          42383,
+          14137,
+          10801,
+          34672,
+          54143,
+          45196,
+          8018,
+          15044,
+          52018,
+          32845,
+          21448,
+          29616,
+          3116,
+          43811,
+          18844,
+          17220
+        ],
+        "last_16": [
+          41612,
+          23145,
+          9589,
+          34489,
+          44201,
+          16171,
+          8576,
+          36942,
+          59003,
+          10485,
+          30170,
+          15755,
+          9497,
+          53051,
+          13728,
+          13215
+        ]
+      },
+      "loader_state_before_sha256": "9394c4ba69d83f1ef31191e02a1140a9dc116b0e59e2987d808c74d72ea9bc0c",
+      "loader_state_after_sha256": "8693bd392369f2a778519824a2e4cbabb9841b197030a91878748c8cedaea0f3"
+    },
+    {
+      "epoch": 18,
+      "train": {
+        "loss": 0.24060090316772462,
+        "accuracy": 0.91116,
+        "correct": 45558,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.3414643398761749,
+        "accuracy": 0.8758,
+        "correct": 8758,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 818,
+          "recall": 0.7918683446272992
+        }
+      },
+      "seconds": 18.597334678997868,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "1f3d15fe328648ec7d560015a073e9a9286beb77ed78fffbd6ec3d61e0e27f89",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          35510,
+          4668,
+          44084,
+          25092,
+          51941,
+          24733,
+          3852,
+          44924,
+          3626,
+          8611,
+          44194,
+          7726,
+          20274,
+          30958,
+          33731,
+          27549
+        ],
+        "last_16": [
+          11692,
+          18923,
+          8233,
+          3964,
+          35688,
+          5607,
+          3976,
+          6394,
+          23905,
+          12109,
+          40243,
+          57441,
+          33882,
+          49827,
+          31276,
+          2882
+        ]
+      },
+      "loader_state_before_sha256": "8693bd392369f2a778519824a2e4cbabb9841b197030a91878748c8cedaea0f3",
+      "loader_state_after_sha256": "e018c5be94be3389c44a753c1e7479afd874acc6ad48ab07d44c2c13df6ef95f"
+    },
+    {
+      "epoch": 19,
+      "train": {
+        "loss": 0.2359024652862549,
+        "accuracy": 0.91168,
+        "correct": 45584,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.29301946718096733,
+        "accuracy": 0.8937,
+        "correct": 8937,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 759,
+          "recall": 0.7347531461761858
+        }
+      },
+      "seconds": 19.952306584993494,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "8054a72e4f470e2a35b7d71e0d5eac3db054c01d30405d42ee0820d0cdf8372e",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          10493,
+          10401,
+          51496,
+          40741,
+          9614,
+          49867,
+          52017,
+          18608,
+          21756,
+          53926,
+          54967,
+          22898,
+          18231,
+          15272,
+          6227,
+          44879
+        ],
+        "last_16": [
+          30271,
+          10669,
+          22589,
+          23018,
+          14293,
+          47955,
+          11283,
+          48695,
+          15747,
+          7386,
+          5146,
+          14281,
+          7341,
+          26532,
+          45022,
+          27097
+        ]
+      },
+      "loader_state_before_sha256": "e018c5be94be3389c44a753c1e7479afd874acc6ad48ab07d44c2c13df6ef95f",
+      "loader_state_after_sha256": "d8946cdab5fcd58194c5a059d20eba37a60fb7f14cd00a9f4027eb91214afd63"
+    },
+    {
+      "epoch": 20,
+      "train": {
+        "loss": 0.23180832450866698,
+        "accuracy": 0.91408,
+        "correct": 45704,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.31053750615119935,
+        "accuracy": 0.8876,
+        "correct": 8876,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 636,
+          "recall": 0.6156824782187803
+        }
+      },
+      "seconds": 17.802156973004458,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "f8710716a3339b1af9881a3d1f16129a488cb4c09f5f5c688373e1bd3f7033cb",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          682,
+          56985,
+          58623,
+          4509,
+          7165,
+          59140,
+          12939,
+          27691,
+          11682,
+          49316,
+          46246,
+          54499,
+          32935,
+          34299,
+          49665,
+          6588
+        ],
+        "last_16": [
+          11559,
+          9741,
+          43542,
+          30481,
+          16701,
+          24207,
+          16417,
+          43364,
+          30845,
+          5108,
+          8261,
+          25314,
+          25998,
+          5329,
+          14490,
+          49829
+        ]
+      },
+      "loader_state_before_sha256": "d8946cdab5fcd58194c5a059d20eba37a60fb7f14cd00a9f4027eb91214afd63",
+      "loader_state_after_sha256": "d05e837727bb59e9d20ce88d1e9900025d49470bf53231197a07de0e8ed09102"
+    },
+    {
+      "epoch": 21,
+      "train": {
+        "loss": 0.2259904987716675,
+        "accuracy": 0.91668,
+        "correct": 45834,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.34978981339931486,
+        "accuracy": 0.876,
+        "correct": 8760,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 456,
+          "recall": 0.441432720232333
+        }
+      },
+      "seconds": 18.027332379992004,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "6fb62c3c49e7685fa3fb920938fc5eb5ee97f1cb02357384c5f535cd4db39089",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          59441,
+          49982,
+          48148,
+          18929,
+          52319,
+          6318,
+          21740,
+          31239,
+          36668,
+          56964,
+          11175,
+          38642,
+          17008,
+          24130,
+          10777,
+          47116
+        ],
+        "last_16": [
+          47275,
+          23640,
+          51420,
+          25112,
+          38462,
+          23054,
+          32353,
+          11275,
+          49436,
+          57075,
+          8084,
+          54056,
+          34865,
+          13800,
+          13773,
+          59445
+        ]
+      },
+      "loader_state_before_sha256": "d05e837727bb59e9d20ce88d1e9900025d49470bf53231197a07de0e8ed09102",
+      "loader_state_after_sha256": "2b02a516ee198ba2e5bf6b355331ee62f3c3832577ec6c59a95f1008bd7e414c"
+    },
+    {
+      "epoch": 22,
+      "train": {
+        "loss": 0.22126327558040618,
+        "accuracy": 0.91718,
+        "correct": 45859,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.2696995372056961,
+        "accuracy": 0.903,
+        "correct": 9030,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 797,
+          "recall": 0.771539206195547
+        }
+      },
+      "seconds": 19.03341841099609,
+      "saved_as_best": true,
+      "sample_order": {
+        "sha256": "635064ec5126b0a54345e372115dfcb23aa14e4c90536cd82d0425606baf9754",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          41447,
+          48943,
+          53018,
+          28953,
+          21209,
+          30996,
+          34203,
+          57526,
+          20284,
+          13534,
+          37494,
+          37960,
+          48130,
+          56690,
+          55324,
+          55858
+        ],
+        "last_16": [
+          6214,
+          11417,
+          15545,
+          20102,
+          26667,
+          32029,
+          57842,
+          15196,
+          40890,
+          7426,
+          1763,
+          5694,
+          40264,
+          13577,
+          52218,
+          59248
+        ]
+      },
+      "loader_state_before_sha256": "2b02a516ee198ba2e5bf6b355331ee62f3c3832577ec6c59a95f1008bd7e414c",
+      "loader_state_after_sha256": "a129f4e5927f7c0bca0f6d4480d67ce2a288f6abe7462ea42fbe0bbe284c0130"
+    },
+    {
+      "epoch": 23,
+      "train": {
+        "loss": 0.2163167733335495,
+        "accuracy": 0.92016,
+        "correct": 46008,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.3185240821123123,
+        "accuracy": 0.8829,
+        "correct": 8829,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 840,
+          "recall": 0.8131655372700871
+        }
+      },
+      "seconds": 22.999650600992027,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "3bd1086df962f5741fb9fb73e9a17d87693bd1f0a6f8bfbc050397db6d10f520",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          32546,
+          38980,
+          33004,
+          52989,
+          36585,
+          40106,
+          29906,
+          39539,
+          27152,
+          2898,
+          24789,
+          56655,
+          57977,
+          37291,
+          53399,
+          54611
+        ],
+        "last_16": [
+          56173,
+          56347,
+          28255,
+          13106,
+          40733,
+          31280,
+          40590,
+          45763,
+          51803,
+          41212,
+          44297,
+          26410,
+          2141,
+          4352,
+          57634,
+          26767
+        ]
+      },
+      "loader_state_before_sha256": "a129f4e5927f7c0bca0f6d4480d67ce2a288f6abe7462ea42fbe0bbe284c0130",
+      "loader_state_after_sha256": "98c858ab10470aba1ef549990aaeed66c8bd04d35c795f4313ae1709acfd572e"
+    },
+    {
+      "epoch": 24,
+      "train": {
+        "loss": 0.21282681020736693,
+        "accuracy": 0.92034,
+        "correct": 46017,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.30231231759786603,
+        "accuracy": 0.8923,
+        "correct": 8923,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 628,
+          "recall": 0.6079380445304937
+        }
+      },
+      "seconds": 19.630803436986753,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "8c39ed064ab8920d54c98926e27b4b818214b815eceade73c001033ecadd3f90",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          33995,
+          47755,
+          29102,
+          35819,
+          14813,
+          10078,
+          20562,
+          46442,
+          36050,
+          35094,
+          8536,
+          18202,
+          4259,
+          27660,
+          41943,
+          50027
+        ],
+        "last_16": [
+          1933,
+          31600,
+          40385,
+          40483,
+          30236,
+          3132,
+          36888,
+          31112,
+          17383,
+          32287,
+          37396,
+          24804,
+          36408,
+          44797,
+          33616,
+          27161
+        ]
+      },
+      "loader_state_before_sha256": "98c858ab10470aba1ef549990aaeed66c8bd04d35c795f4313ae1709acfd572e",
+      "loader_state_after_sha256": "5b30bbc906eca9188d3193bbe08f660695a4311a6ed380a49a44d5115f167533"
+    },
+    {
+      "epoch": 25,
+      "train": {
+        "loss": 0.20879053929448127,
+        "accuracy": 0.92216,
+        "correct": 46108,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.30092677212953567,
+        "accuracy": 0.8909,
+        "correct": 8909,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 784,
+          "recall": 0.7589545014520813
+        }
+      },
+      "seconds": 17.458137823996367,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "dedcb079a79a741cad4937dc1d252b4e52c3eb66fb91cd7c94df999733dd53b6",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          10044,
+          56206,
+          12703,
+          28710,
+          29079,
+          16200,
+          34564,
+          46634,
+          49217,
+          561,
+          5019,
+          12877,
+          22825,
+          19085,
+          58174,
+          36029
+        ],
+        "last_16": [
+          8366,
+          9135,
+          9206,
+          32661,
+          24904,
+          17234,
+          50008,
+          15020,
+          44686,
+          54434,
+          59770,
+          51310,
+          30575,
+          27463,
+          59138,
+          21756
+        ]
+      },
+      "loader_state_before_sha256": "5b30bbc906eca9188d3193bbe08f660695a4311a6ed380a49a44d5115f167533",
+      "loader_state_after_sha256": "581405a72c2845ece94240eddc3797380c79e4d01209b024f9e7cf445c707a5c"
+    },
+    {
+      "epoch": 26,
+      "train": {
+        "loss": 0.20440462609291077,
+        "accuracy": 0.92384,
+        "correct": 46192,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.2635711447477341,
+        "accuracy": 0.9015,
+        "correct": 9015,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 824,
+          "recall": 0.797676669893514
+        }
+      },
+      "seconds": 16.004725991995656,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "79ef2e09d44f66db44d408c14320c5e28e2bc5ecb75d201ea077c931b2423019",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          56897,
+          25200,
+          46037,
+          18874,
+          7096,
+          38310,
+          12653,
+          34922,
+          3430,
+          56614,
+          27501,
+          16818,
+          33743,
+          14699,
+          22520,
+          20091
+        ],
+        "last_16": [
+          20456,
+          28147,
+          36127,
+          52439,
+          16205,
+          30839,
+          47549,
+          59639,
+          47034,
+          6944,
+          41631,
+          57765,
+          16111,
+          15227,
+          24382,
+          13118
+        ]
+      },
+      "loader_state_before_sha256": "581405a72c2845ece94240eddc3797380c79e4d01209b024f9e7cf445c707a5c",
+      "loader_state_after_sha256": "9e66cff256cf4660d4b4dc063139074e1169f8dbf1eae970a95a5c1310a3d41a"
+    },
+    {
+      "epoch": 27,
+      "train": {
+        "loss": 0.1995576938486099,
+        "accuracy": 0.92594,
+        "correct": 46297,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.2645663739442825,
+        "accuracy": 0.9048,
+        "correct": 9048,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 784,
+          "recall": 0.7589545014520813
+        }
+      },
+      "seconds": 15.911802887989325,
+      "saved_as_best": true,
+      "sample_order": {
+        "sha256": "2709f491d0d925f13a04e6cffb1a244cc82c7de810146d15b7f986717b10b5ad",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          50006,
+          45338,
+          51512,
+          43780,
+          43662,
+          51963,
+          42447,
+          33218,
+          35539,
+          21465,
+          58678,
+          47283,
+          36064,
+          2800,
+          15503,
+          25671
+        ],
+        "last_16": [
+          57842,
+          40984,
+          35087,
+          19684,
+          19241,
+          37197,
+          58133,
+          40478,
+          51778,
+          17579,
+          54426,
+          53229,
+          3196,
+          46638,
+          59496,
+          39173
+        ]
+      },
+      "loader_state_before_sha256": "9e66cff256cf4660d4b4dc063139074e1169f8dbf1eae970a95a5c1310a3d41a",
+      "loader_state_after_sha256": "aba180e1099caade6d8e2c633031955132ad9b9660b9dce15e7e45e27f0f39ee"
+    },
+    {
+      "epoch": 28,
+      "train": {
+        "loss": 0.19562743014097214,
+        "accuracy": 0.92738,
+        "correct": 46369,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.2683512839794159,
+        "accuracy": 0.9037,
+        "correct": 9037,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 674,
+          "recall": 0.6524685382381413
+        }
+      },
+      "seconds": 16.247121761000017,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "536de921a6d7a343ecaedd3732b80d2dcee937bc9e478e412ace5a284de3c830",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          59967,
+          1556,
+          20722,
+          52018,
+          7037,
+          50826,
+          51248,
+          38018,
+          50453,
+          56845,
+          36287,
+          27585,
+          2988,
+          17033,
+          23614,
+          31202
+        ],
+        "last_16": [
+          24675,
+          59858,
+          40560,
+          13915,
+          7688,
+          53056,
+          50115,
+          6007,
+          30244,
+          24644,
+          55521,
+          24020,
+          22217,
+          4965,
+          25806,
+          27200
+        ]
+      },
+      "loader_state_before_sha256": "aba180e1099caade6d8e2c633031955132ad9b9660b9dce15e7e45e27f0f39ee",
+      "loader_state_after_sha256": "707a67daa0705b8d185155f8eb6c8b35cfe565f50091422a6d96dbd715552556"
+    },
+    {
+      "epoch": 29,
+      "train": {
+        "loss": 0.19192620101213456,
+        "accuracy": 0.92926,
+        "correct": 46463,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.3120820271730423,
+        "accuracy": 0.8923,
+        "correct": 8923,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 751,
+          "recall": 0.7270087124878993
+        }
+      },
+      "seconds": 16.27166631,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "6594eeb6c43e9293d2c43138cabf6ad8e7084942f4a1eb695a3fcb4f77a1538a",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          41792,
+          54711,
+          38577,
+          59291,
+          33437,
+          43589,
+          1245,
+          47997,
+          17434,
+          24929,
+          41157,
+          58631,
+          36640,
+          38034,
+          21439,
+          59732
+        ],
+        "last_16": [
+          58062,
+          53363,
+          17659,
+          57803,
+          12380,
+          39199,
+          2716,
+          17328,
+          6438,
+          25291,
+          4664,
+          17721,
+          55857,
+          30072,
+          35686,
+          41763
+        ]
+      },
+      "loader_state_before_sha256": "707a67daa0705b8d185155f8eb6c8b35cfe565f50091422a6d96dbd715552556",
+      "loader_state_after_sha256": "c94b86d4e4d4c799e19aa9072edb4cb0481aad6c474b59e9982d43910ad540e3"
+    },
+    {
+      "epoch": 30,
+      "train": {
+        "loss": 0.18910739662885667,
+        "accuracy": 0.9299,
+        "correct": 46495,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.25406209219694137,
+        "accuracy": 0.9065,
+        "correct": 9065,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 782,
+          "recall": 0.7570183930300097
+        }
+      },
+      "seconds": 15.650405370004592,
+      "saved_as_best": true,
+      "sample_order": {
+        "sha256": "a9af372dd20679cb7db0ca364dc8335107be42c7233bd792336597f44b4839e6",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          3494,
+          18303,
+          22888,
+          59495,
+          5932,
+          24859,
+          46342,
+          16336,
+          35111,
+          7607,
+          9232,
+          15046,
+          28160,
+          23420,
+          2920,
+          7563
+        ],
+        "last_16": [
+          37678,
+          45858,
+          18998,
+          6820,
+          6164,
+          16492,
+          42631,
+          5053,
+          15953,
+          59324,
+          38969,
+          37553,
+          2386,
+          11335,
+          3285,
+          58706
+        ]
+      },
+      "loader_state_before_sha256": "c94b86d4e4d4c799e19aa9072edb4cb0481aad6c474b59e9982d43910ad540e3",
+      "loader_state_after_sha256": "e6bef6499a7e24247864707cee564d5fa22e45097edde74e047fb434039e9292"
+    },
+    {
+      "epoch": 31,
+      "train": {
+        "loss": 0.18448104119420053,
+        "accuracy": 0.9309,
+        "correct": 46545,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.29038693190068005,
+        "accuracy": 0.8973,
+        "correct": 8973,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 669,
+          "recall": 0.6476282671829623
+        }
+      },
+      "seconds": 15.68896143999882,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "89daf4c1ba4487d3ef2d0398234aeff2396744c0f04449aa83410903cc74f2bf",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          47761,
+          2840,
+          11482,
+          37806,
+          28597,
+          54160,
+          22659,
+          42010,
+          3614,
+          52285,
+          43616,
+          56160,
+          45660,
+          26181,
+          44407,
+          19262
+        ],
+        "last_16": [
+          42092,
+          39874,
+          16942,
+          20050,
+          43242,
+          52961,
+          42870,
+          38006,
+          52067,
+          15653,
+          2104,
+          27123,
+          44750,
+          50367,
+          21978,
+          17440
+        ]
+      },
+      "loader_state_before_sha256": "e6bef6499a7e24247864707cee564d5fa22e45097edde74e047fb434039e9292",
+      "loader_state_after_sha256": "3462feede330e47a631986495007cf4fe5304262f63dc2ee0e7386a75d34325e"
+    },
+    {
+      "epoch": 32,
+      "train": {
+        "loss": 0.18146796935081483,
+        "accuracy": 0.932,
+        "correct": 46600,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.3174149246275425,
+        "accuracy": 0.8892,
+        "correct": 8892,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 834,
+          "recall": 0.8073572120038722
+        }
+      },
+      "seconds": 15.701477654001792,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "9568dc0ab48cb9c8e09b7748f08e91a874a391a64367f2ed5ffe12273eac5b8e",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          43889,
+          15519,
+          24069,
+          5663,
+          3470,
+          2565,
+          58493,
+          16436,
+          10844,
+          51888,
+          22595,
+          28675,
+          59376,
+          18388,
+          7247,
+          8172
+        ],
+        "last_16": [
+          4817,
+          51287,
+          49365,
+          56619,
+          30511,
+          52237,
+          58346,
+          50169,
+          21931,
+          16341,
+          31558,
+          16692,
+          35750,
+          37036,
+          40935,
+          52071
+        ]
+      },
+      "loader_state_before_sha256": "3462feede330e47a631986495007cf4fe5304262f63dc2ee0e7386a75d34325e",
+      "loader_state_after_sha256": "c650176753a017041bc6c737e800e8c255b38126282e12864c1cc4aff2a92337"
+    },
+    {
+      "epoch": 33,
+      "train": {
+        "loss": 0.1775615423154831,
+        "accuracy": 0.93318,
+        "correct": 46659,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.26405571167320013,
+        "accuracy": 0.9036,
+        "correct": 9036,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 760,
+          "recall": 0.7357212003872217
+        }
+      },
+      "seconds": 17.370946334995097,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "51144a0a9f4484f82560b070e0ca7287fe9cfcba0c24b9856486e4090e87c8d1",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          51164,
+          42108,
+          15510,
+          7929,
+          14526,
+          29323,
+          58922,
+          47004,
+          16418,
+          54469,
+          59121,
+          1462,
+          13854,
+          16366,
+          8527,
+          23743
+        ],
+        "last_16": [
+          8785,
+          15277,
+          55268,
+          4734,
+          22950,
+          52842,
+          53868,
+          57260,
+          21507,
+          3232,
+          56258,
+          57247,
+          19528,
+          9980,
+          50939,
+          48734
+        ]
+      },
+      "loader_state_before_sha256": "c650176753a017041bc6c737e800e8c255b38126282e12864c1cc4aff2a92337",
+      "loader_state_after_sha256": "d2efcc533423159ace2d6736bee46ce4846c8a56770782b7ce8946d9ded1a533"
+    },
+    {
+      "epoch": 34,
+      "train": {
+        "loss": 0.17422057742774485,
+        "accuracy": 0.9353,
+        "correct": 46765,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.2862256772339344,
+        "accuracy": 0.8984,
+        "correct": 8984,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 905,
+          "recall": 0.8760890609874153
+        }
+      },
+      "seconds": 17.93497143899731,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "20121b316588650eeabe4ecaac61b37ad0c4b1a642a3edeb20839f1fef223570",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          35457,
+          45917,
+          16328,
+          21150,
+          14245,
+          44059,
+          20113,
+          18242,
+          23563,
+          22698,
+          26882,
+          5479,
+          35629,
+          20312,
+          54827,
+          36877
+        ],
+        "last_16": [
+          11124,
+          36751,
+          58343,
+          25469,
+          7487,
+          15688,
+          22412,
+          48714,
+          16460,
+          10616,
+          21718,
+          56170,
+          36703,
+          40748,
+          14030,
+          59579
+        ]
+      },
+      "loader_state_before_sha256": "d2efcc533423159ace2d6736bee46ce4846c8a56770782b7ce8946d9ded1a533",
+      "loader_state_after_sha256": "67a259413b5cd1121918819295bc63166a296fbd0f19b219e6400880cec75b67"
+    },
+    {
+      "epoch": 35,
+      "train": {
+        "loss": 0.17020596898794174,
+        "accuracy": 0.93666,
+        "correct": 46833,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.283383230817318,
+        "accuracy": 0.9029,
+        "correct": 9029,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 749,
+          "recall": 0.7250726040658277
+        }
+      },
+      "seconds": 17.21736921899719,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "0fc32f8915c9f084389ce4a80e41660a1881cbe72438d7f1a4a3889ad35d7954",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          4662,
+          21527,
+          51795,
+          25580,
+          9208,
+          12925,
+          20344,
+          24910,
+          27484,
+          17537,
+          42071,
+          49222,
+          18056,
+          15931,
+          20671,
+          49195
+        ],
+        "last_16": [
+          43470,
+          24044,
+          21968,
+          52480,
+          24543,
+          11481,
+          50197,
+          32880,
+          10314,
+          7566,
+          8077,
+          42767,
+          13890,
+          21949,
+          34067,
+          10184
+        ]
+      },
+      "loader_state_before_sha256": "67a259413b5cd1121918819295bc63166a296fbd0f19b219e6400880cec75b67",
+      "loader_state_after_sha256": "0387125e265518d5ef17f965ba4dfbff634c89087753f69f7123792f7f0af8b4"
+    },
+    {
+      "epoch": 36,
+      "train": {
+        "loss": 0.16627507351756096,
+        "accuracy": 0.93872,
+        "correct": 46936,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.2558972529411316,
+        "accuracy": 0.9078,
+        "correct": 9078,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 727,
+          "recall": 0.7037754114230397
+        }
+      },
+      "seconds": 16.875440500996774,
+      "saved_as_best": true,
+      "sample_order": {
+        "sha256": "a7c1aad85a144fac7e6b22962698759a2713a1b8497dd3076de1218fe00d960e",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          37600,
+          22734,
+          36446,
+          42714,
+          25707,
+          5230,
+          38271,
+          32215,
+          21867,
+          40362,
+          2130,
+          20234,
+          24892,
+          27821,
+          40582,
+          10164
+        ],
+        "last_16": [
+          23421,
+          39193,
+          23664,
+          34454,
+          9218,
+          53708,
+          36477,
+          15251,
+          39733,
+          13146,
+          25863,
+          22231,
+          4252,
+          48506,
+          6453,
+          26359
+        ]
+      },
+      "loader_state_before_sha256": "0387125e265518d5ef17f965ba4dfbff634c89087753f69f7123792f7f0af8b4",
+      "loader_state_after_sha256": "62bb7970f211499e7ff29c1650475d37f81555b1d504971af8b306716fe98cab"
+    },
+    {
+      "epoch": 37,
+      "train": {
+        "loss": 0.1628184637737274,
+        "accuracy": 0.93974,
+        "correct": 46987,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.2647071052670479,
+        "accuracy": 0.9088,
+        "correct": 9088,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 656,
+          "recall": 0.6350435624394967
+        }
+      },
+      "seconds": 17.53187158399669,
+      "saved_as_best": true,
+      "sample_order": {
+        "sha256": "67914bf0afa44aa283f0cd17ca06027599250183a59866975a9a2612f7fdb53d",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          1413,
+          2385,
+          49745,
+          547,
+          12560,
+          42934,
+          53919,
+          224,
+          47870,
+          55633,
+          59064,
+          52387,
+          135,
+          23261,
+          20756,
+          57566
+        ],
+        "last_16": [
+          10623,
+          34722,
+          37379,
+          30072,
+          10326,
+          713,
+          12681,
+          34954,
+          7502,
+          2882,
+          47752,
+          34676,
+          43539,
+          12641,
+          21954,
+          38501
+        ]
+      },
+      "loader_state_before_sha256": "62bb7970f211499e7ff29c1650475d37f81555b1d504971af8b306716fe98cab",
+      "loader_state_after_sha256": "ef5dbd845f75b243a8cf31e91579115cc67c8f5525f361a79ccec6e84c06e817"
+    },
+    {
+      "epoch": 38,
+      "train": {
+        "loss": 0.15987871559381486,
+        "accuracy": 0.94056,
+        "correct": 47028,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.27933370645046235,
+        "accuracy": 0.9009,
+        "correct": 9009,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 905,
+          "recall": 0.8760890609874153
+        }
+      },
+      "seconds": 17.16746658399643,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "735a021a82296fe15fca49d37b910ae83e4c6fab0756b7e256b91fa164486e22",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          20620,
+          51436,
+          49840,
+          15917,
+          37868,
+          38353,
+          47561,
+          22782,
+          46314,
+          58845,
+          22255,
+          27551,
+          36775,
+          6576,
+          15812,
+          3358
+        ],
+        "last_16": [
+          24487,
+          55702,
+          16046,
+          20326,
+          53247,
+          7955,
+          37654,
+          31451,
+          4576,
+          39375,
+          29839,
+          27753,
+          30888,
+          2516,
+          19769,
+          45569
+        ]
+      },
+      "loader_state_before_sha256": "ef5dbd845f75b243a8cf31e91579115cc67c8f5525f361a79ccec6e84c06e817",
+      "loader_state_after_sha256": "253a56faeb1f3d4757e38d17f1dc7937f50fb69e5558b9bf658b6d876dde6a91"
+    },
+    {
+      "epoch": 39,
+      "train": {
+        "loss": 0.1573357136440277,
+        "accuracy": 0.94138,
+        "correct": 47069,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.3033457560777664,
+        "accuracy": 0.8958,
+        "correct": 8958,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 769,
+          "recall": 0.744433688286544
+        }
+      },
+      "seconds": 17.335115217996645,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "bcc4e5424f387e45c77930936817e0242c7d56a7baf41e5c250d1a263d48273b",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          54217,
+          52992,
+          10851,
+          10842,
+          33479,
+          3816,
+          5855,
+          36384,
+          26053,
+          28996,
+          57366,
+          9566,
+          40992,
+          54851,
+          43274,
+          30164
+        ],
+        "last_16": [
+          19028,
+          53620,
+          41618,
+          36196,
+          21026,
+          29023,
+          45606,
+          19234,
+          1241,
+          14520,
+          26628,
+          56365,
+          5230,
+          54054,
+          58846,
+          27781
+        ]
+      },
+      "loader_state_before_sha256": "253a56faeb1f3d4757e38d17f1dc7937f50fb69e5558b9bf658b6d876dde6a91",
+      "loader_state_after_sha256": "f099c1b6bda6f8b7914d1c4e6cdc42e8042dee67a96792fbb4151295a9d99106"
+    },
+    {
+      "epoch": 40,
+      "train": {
+        "loss": 0.15419908278465272,
+        "accuracy": 0.94292,
+        "correct": 47146,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.27788248254060743,
+        "accuracy": 0.9044,
+        "correct": 9044,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 877,
+          "recall": 0.8489835430784124
+        }
+      },
+      "seconds": 18.989288665005006,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "50760371ae85e72699c7120688563a6db28535f3ff2c3c5803816f537716b96e",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          46848,
+          41625,
+          58858,
+          31120,
+          44314,
+          43457,
+          49262,
+          29044,
+          22367,
+          12393,
+          59308,
+          51410,
+          2833,
+          37309,
+          47011,
+          18508
+        ],
+        "last_16": [
+          48133,
+          33988,
+          29906,
+          15682,
+          50984,
+          17467,
+          17810,
+          2601,
+          33847,
+          23465,
+          22989,
+          34212,
+          1826,
+          12840,
+          27404,
+          38372
+        ]
+      },
+      "loader_state_before_sha256": "f099c1b6bda6f8b7914d1c4e6cdc42e8042dee67a96792fbb4151295a9d99106",
+      "loader_state_after_sha256": "6056721a780cb8af72e1bbccfa544eef096e0c86ed8832075149e122cf6d6a31"
+    },
+    {
+      "epoch": 41,
+      "train": {
+        "loss": 0.1507503120523691,
+        "accuracy": 0.94396,
+        "correct": 47198,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.27420686748325823,
+        "accuracy": 0.9065,
+        "correct": 9065,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 673,
+          "recall": 0.6515004840271055
+        }
+      },
+      "seconds": 19.55976739000471,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "e7021e2bd627334aedd5be90c00cb3f374562a666f1bc555497e2be22e494d21",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          43675,
+          2875,
+          57892,
+          53871,
+          45476,
+          18307,
+          53545,
+          53295,
+          20176,
+          12825,
+          45821,
+          9126,
+          4311,
+          50002,
+          43398,
+          49920
+        ],
+        "last_16": [
+          56533,
+          33190,
+          17434,
+          33102,
+          38459,
+          38342,
+          4290,
+          23382,
+          42236,
+          5130,
+          12390,
+          29450,
+          4162,
+          1362,
+          15027,
+          45468
+        ]
+      },
+      "loader_state_before_sha256": "6056721a780cb8af72e1bbccfa544eef096e0c86ed8832075149e122cf6d6a31",
+      "loader_state_after_sha256": "a641115a594e5e2a381248a4b8b95c629bf57089801d841bf1cd4be850e4168b"
+    },
+    {
+      "epoch": 42,
+      "train": {
+        "loss": 0.14849996371269225,
+        "accuracy": 0.94446,
+        "correct": 47223,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.2656707370221615,
+        "accuracy": 0.9101,
+        "correct": 9101,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 772,
+          "recall": 0.7473378509196515
+        }
+      },
+      "seconds": 19.025915844991687,
+      "saved_as_best": true,
+      "sample_order": {
+        "sha256": "b451ef39b0cbb7f88142d131c2474bd4c0eb36b686c22e40471f93af31e9b005",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          10257,
+          55595,
+          29002,
+          26686,
+          10812,
+          54200,
+          36995,
+          4754,
+          11760,
+          27494,
+          13884,
+          51293,
+          37729,
+          11062,
+          6784,
+          557
+        ],
+        "last_16": [
+          32841,
+          54048,
+          45267,
+          36083,
+          4078,
+          23634,
+          51116,
+          41683,
+          26842,
+          10233,
+          32314,
+          34103,
+          51991,
+          50411,
+          51408,
+          52398
+        ]
+      },
+      "loader_state_before_sha256": "a641115a594e5e2a381248a4b8b95c629bf57089801d841bf1cd4be850e4168b",
+      "loader_state_after_sha256": "b09fc1217ae6c8b538504051374c852333ca943d2d880a6df78803f15916d3bf"
+    },
+    {
+      "epoch": 43,
+      "train": {
+        "loss": 0.14397473970890046,
+        "accuracy": 0.94654,
+        "correct": 47327,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.2786117128431797,
+        "accuracy": 0.9031,
+        "correct": 9031,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 898,
+          "recall": 0.8693126815101646
+        }
+      },
+      "seconds": 16.944542794008157,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "ec15e911670a80a7473cb11b2f620b0f00fbcb773a0cf9a1ad545b9201826f8f",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          32739,
+          29000,
+          27704,
+          43788,
+          2414,
+          11849,
+          43717,
+          20109,
+          19058,
+          23974,
+          40805,
+          36116,
+          22621,
+          43011,
+          46552,
+          18925
+        ],
+        "last_16": [
+          29459,
+          48807,
+          16220,
+          23344,
+          11187,
+          43744,
+          28145,
+          10025,
+          18538,
+          12692,
+          8486,
+          10167,
+          33785,
+          49553,
+          55997,
+          18092
+        ]
+      },
+      "loader_state_before_sha256": "b09fc1217ae6c8b538504051374c852333ca943d2d880a6df78803f15916d3bf",
+      "loader_state_after_sha256": "b3b63ae688dc3122a36e3b490ca05c196a525afe08e859d961e60f4ecc9676ce"
+    },
+    {
+      "epoch": 44,
+      "train": {
+        "loss": 0.14129565856873988,
+        "accuracy": 0.94762,
+        "correct": 47381,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.26491170370429756,
+        "accuracy": 0.9088,
+        "correct": 9088,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 737,
+          "recall": 0.7134559535333979
+        }
+      },
+      "seconds": 18.41409966700303,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "b77735aa465829438dc7947bd1bb6599ec935899ae4d3d8a97a799b0443263d2",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          55831,
+          22943,
+          54471,
+          31547,
+          44287,
+          32195,
+          38979,
+          22480,
+          45876,
+          58303,
+          21274,
+          46555,
+          53958,
+          20043,
+          28062,
+          55264
+        ],
+        "last_16": [
+          54255,
+          26475,
+          40602,
+          49769,
+          25173,
+          45227,
+          26284,
+          56944,
+          58852,
+          57278,
+          55634,
+          32238,
+          8395,
+          34543,
+          58780,
+          47107
+        ]
+      },
+      "loader_state_before_sha256": "b3b63ae688dc3122a36e3b490ca05c196a525afe08e859d961e60f4ecc9676ce",
+      "loader_state_after_sha256": "a673bbbf14c6fe51bb2d41c807970e71b1a8a503ea5e39a9284d249b830de8dc"
+    },
+    {
+      "epoch": 45,
+      "train": {
+        "loss": 0.13773675432801247,
+        "accuracy": 0.9489,
+        "correct": 47445,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.26141705612540245,
+        "accuracy": 0.915,
+        "correct": 9150,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 824,
+          "recall": 0.797676669893514
+        }
+      },
+      "seconds": 20.229949300002772,
+      "saved_as_best": true,
+      "sample_order": {
+        "sha256": "bba31687c0ef8629099fc1d303f5991d3e0cd5c11422d9fe40f72ee834ea7960",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          933,
+          57036,
+          54362,
+          24968,
+          44111,
+          55163,
+          41401,
+          51751,
+          30279,
+          55055,
+          23776,
+          47724,
+          59568,
+          19738,
+          53776,
+          53618
+        ],
+        "last_16": [
+          49715,
+          58904,
+          13545,
+          47686,
+          27571,
+          21553,
+          4167,
+          18535,
+          9296,
+          33332,
+          27315,
+          7564,
+          50144,
+          5596,
+          11877,
+          10852
+        ]
+      },
+      "loader_state_before_sha256": "a673bbbf14c6fe51bb2d41c807970e71b1a8a503ea5e39a9284d249b830de8dc",
+      "loader_state_after_sha256": "4938cda898cb6e872ddce1075d12124290cecdf6ca3bfc939608cdaff1c4dbaf"
+    },
+    {
+      "epoch": 46,
+      "train": {
+        "loss": 0.13602481788158416,
+        "accuracy": 0.9501,
+        "correct": 47505,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.2575487187996507,
+        "accuracy": 0.9126,
+        "correct": 9126,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 748,
+          "recall": 0.7241045498547919
+        }
+      },
+      "seconds": 19.505271182002616,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "281bc5bdb6997125734996084c903d993a6eea0e033b3838c4b035889d134e09",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          36151,
+          58226,
+          2954,
+          43366,
+          34847,
+          41898,
+          48404,
+          45900,
+          4368,
+          28699,
+          37552,
+          47455,
+          6444,
+          40826,
+          52960,
+          11327
+        ],
+        "last_16": [
+          41298,
+          17848,
+          59711,
+          7909,
+          28464,
+          47962,
+          7578,
+          37774,
+          35461,
+          59556,
+          2234,
+          22210,
+          15148,
+          47643,
+          18133,
+          10508
+        ]
+      },
+      "loader_state_before_sha256": "4938cda898cb6e872ddce1075d12124290cecdf6ca3bfc939608cdaff1c4dbaf",
+      "loader_state_after_sha256": "7c3acb428425047e20c058c8b70ebe289422ecaba42c7b842f9f96e2dc68e0fb",
+      "validation_loss_improved": true,
+      "validation_accuracy_new_high": false,
+      "loss_wait": 0,
+      "accuracy_wait": 1
+    },
+    {
+      "epoch": 47,
+      "train": {
+        "loss": 0.13365875925540924,
+        "accuracy": 0.95,
+        "correct": 47500,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.2630749487429857,
+        "accuracy": 0.9101,
+        "correct": 9101,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 715,
+          "recall": 0.6921587608906099
+        }
+      },
+      "seconds": 15.674015659009456,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "c8163a69584a6394f7af99905f9a1d5bf75b98fb8df66f61ad6f8b9d2a798f43",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          37326,
+          13284,
+          43983,
+          13418,
+          14553,
+          32993,
+          11216,
+          32333,
+          32233,
+          19621,
+          15806,
+          33262,
+          37186,
+          51925,
+          28002,
+          4936
+        ],
+        "last_16": [
+          15770,
+          29224,
+          6778,
+          24797,
+          37620,
+          47669,
+          16394,
+          6237,
+          48913,
+          11933,
+          17335,
+          15529,
+          23855,
+          35567,
+          30165,
+          46814
+        ]
+      },
+      "loader_state_before_sha256": "7c3acb428425047e20c058c8b70ebe289422ecaba42c7b842f9f96e2dc68e0fb",
+      "loader_state_after_sha256": "89aad84ec2cda6edfe44c841b4105f42fcea2af660fa9ab3914283dfbc4dd97d",
+      "validation_loss_improved": false,
+      "validation_accuracy_new_high": false,
+      "loss_wait": 1,
+      "accuracy_wait": 2
+    },
+    {
+      "epoch": 48,
+      "train": {
+        "loss": 0.13064062188148498,
+        "accuracy": 0.95154,
+        "correct": 47577,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.28549742209911344,
+        "accuracy": 0.9088,
+        "correct": 9088,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 658,
+          "recall": 0.6369796708615683
+        }
+      },
+      "seconds": 18.774660484996275,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "d0f8562dd6ae2ef3914fd3bb60c817565202f715f2e910b75259e2f6db375b14",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          9440,
+          35346,
+          4663,
+          19320,
+          51635,
+          35687,
+          28607,
+          40759,
+          21160,
+          49976,
+          13035,
+          4953,
+          52441,
+          18497,
+          37564,
+          49065
+        ],
+        "last_16": [
+          21345,
+          20295,
+          15926,
+          34663,
+          3710,
+          41981,
+          47192,
+          9332,
+          20263,
+          57496,
+          21416,
+          53529,
+          14285,
+          11131,
+          9888,
+          58517
+        ]
+      },
+      "loader_state_before_sha256": "89aad84ec2cda6edfe44c841b4105f42fcea2af660fa9ab3914283dfbc4dd97d",
+      "loader_state_after_sha256": "415947d582f0ef4ffae0db4bed91c7d7d244d599c699250e6990798d6000371c",
+      "validation_loss_improved": false,
+      "validation_accuracy_new_high": false,
+      "loss_wait": 2,
+      "accuracy_wait": 3
+    },
+    {
+      "epoch": 49,
+      "train": {
+        "loss": 0.1270523151922226,
+        "accuracy": 0.95306,
+        "correct": 47653,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.3348222458779812,
+        "accuracy": 0.891,
+        "correct": 8910,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 660,
+          "recall": 0.6389157792836399
+        }
+      },
+      "seconds": 20.3574147340114,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "4acb340a71adbad0bd4d88a67e5037284f5325636b56a397bfd1b1abefc554eb",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          14592,
+          28510,
+          2629,
+          52680,
+          5628,
+          49583,
+          51319,
+          15895,
+          53282,
+          29601,
+          16672,
+          54962,
+          12979,
+          41325,
+          35867,
+          46713
+        ],
+        "last_16": [
+          58131,
+          20421,
+          16624,
+          21553,
+          44221,
+          6186,
+          6073,
+          53763,
+          45811,
+          29942,
+          24144,
+          13821,
+          6626,
+          46027,
+          26563,
+          5212
+        ]
+      },
+      "loader_state_before_sha256": "415947d582f0ef4ffae0db4bed91c7d7d244d599c699250e6990798d6000371c",
+      "loader_state_after_sha256": "40de28f48bc0ffb3d235cdcc9b331838d7aee698696f8c8fe8b2ecc77dca383b",
+      "validation_loss_improved": false,
+      "validation_accuracy_new_high": false,
+      "loss_wait": 3,
+      "accuracy_wait": 4
+    },
+    {
+      "epoch": 50,
+      "train": {
+        "loss": 0.12347330901026726,
+        "accuracy": 0.9541,
+        "correct": 47705,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.28447087374031543,
+        "accuracy": 0.9095,
+        "correct": 9095,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 735,
+          "recall": 0.7115198451113263
+        }
+      },
+      "seconds": 16.290948548004963,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "1d934ed5795395a23d2770d12ccb401e1cd4408b5ad935a91e2e2ddbaf715c12",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          42463,
+          15890,
+          55983,
+          2309,
+          47183,
+          3706,
+          8462,
+          52986,
+          8714,
+          24431,
+          35239,
+          648,
+          46514,
+          6040,
+          39855,
+          2425
+        ],
+        "last_16": [
+          58026,
+          22756,
+          3063,
+          44300,
+          912,
+          56513,
+          31752,
+          18957,
+          52396,
+          22202,
+          17398,
+          43382,
+          2968,
+          20376,
+          51395,
+          24065
+        ]
+      },
+      "loader_state_before_sha256": "40de28f48bc0ffb3d235cdcc9b331838d7aee698696f8c8fe8b2ecc77dca383b",
+      "loader_state_after_sha256": "91b73efb3c19ce975de24c2c6f65a8b2aa0d572d9be5bb8cad480e10fc5e4376",
+      "validation_loss_improved": false,
+      "validation_accuracy_new_high": false,
+      "loss_wait": 4,
+      "accuracy_wait": 5
+    },
+    {
+      "epoch": 51,
+      "train": {
+        "loss": 0.12290862470865249,
+        "accuracy": 0.9554,
+        "correct": 47770,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.27840907055437564,
+        "accuracy": 0.9107,
+        "correct": 9107,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 847,
+          "recall": 0.8199419167473379
+        }
+      },
+      "seconds": 17.952013179005007,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "6e05bea4061c91d5eb61629b972761a3e524aa03fa9ee45ef419200ea8f8a457",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          19987,
+          33677,
+          12346,
+          57280,
+          25921,
+          13143,
+          21406,
+          41395,
+          44838,
+          29359,
+          59235,
+          20686,
+          36059,
+          39440,
+          3803,
+          14833
+        ],
+        "last_16": [
+          33624,
+          16708,
+          8707,
+          18745,
+          7826,
+          37034,
+          10005,
+          23560,
+          57243,
+          55334,
+          41699,
+          14719,
+          14195,
+          19594,
+          35064,
+          36775
+        ]
+      },
+      "loader_state_before_sha256": "91b73efb3c19ce975de24c2c6f65a8b2aa0d572d9be5bb8cad480e10fc5e4376",
+      "loader_state_after_sha256": "262400a5c043a23b45e1c6c33822717e4bda65d4b0d105afc6b33fc50fe91e82",
+      "validation_loss_improved": false,
+      "validation_accuracy_new_high": false,
+      "loss_wait": 5,
+      "accuracy_wait": 6
+    },
+    {
+      "epoch": 52,
+      "train": {
+        "loss": 0.12044169538632035,
+        "accuracy": 0.95514,
+        "correct": 47757,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.27264138754010203,
+        "accuracy": 0.9119,
+        "correct": 9119,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 802,
+          "recall": 0.7763794772507261
+        }
+      },
+      "seconds": 15.050436275007087,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "83bb4d339e50a90cb433a62b2de999912d6b5147156033e6d5f3947c3b026cef",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          11012,
+          33243,
+          9642,
+          29577,
+          58104,
+          34566,
+          40624,
+          42316,
+          11221,
+          39857,
+          39315,
+          40622,
+          9724,
+          4257,
+          23463,
+          10549
+        ],
+        "last_16": [
+          31552,
+          6646,
+          5844,
+          54585,
+          26422,
+          37148,
+          7687,
+          53967,
+          55468,
+          15831,
+          50594,
+          26741,
+          25105,
+          4304,
+          45763,
+          16059
+        ]
+      },
+      "loader_state_before_sha256": "262400a5c043a23b45e1c6c33822717e4bda65d4b0d105afc6b33fc50fe91e82",
+      "loader_state_after_sha256": "232fd27ad8002ae35d3d545f0d6122aa5d5fa6d163e55472bb0da09c83b38f97",
+      "validation_loss_improved": false,
+      "validation_accuracy_new_high": false,
+      "loss_wait": 6,
+      "accuracy_wait": 7
+    },
+    {
+      "epoch": 53,
+      "train": {
+        "loss": 0.11661280371248722,
+        "accuracy": 0.95686,
+        "correct": 47843,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.26671229980289934,
+        "accuracy": 0.9135,
+        "correct": 9135,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 724,
+          "recall": 0.7008712487899322
+        }
+      },
+      "seconds": 15.956575067990343,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "1afb057901a1b200b2e4911e4c9c7693b69602dabb642bbd17e74a446b091f06",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          51514,
+          45382,
+          26329,
+          5915,
+          26831,
+          8067,
+          30359,
+          41693,
+          27954,
+          5753,
+          29273,
+          12940,
+          1863,
+          908,
+          54057,
+          22025
+        ],
+        "last_16": [
+          53354,
+          49370,
+          56616,
+          19061,
+          26824,
+          55238,
+          23197,
+          13680,
+          3649,
+          39142,
+          40539,
+          31424,
+          44058,
+          469,
+          50688,
+          1223
+        ]
+      },
+      "loader_state_before_sha256": "232fd27ad8002ae35d3d545f0d6122aa5d5fa6d163e55472bb0da09c83b38f97",
+      "loader_state_after_sha256": "6863443ef928dd92e014e26956ed7f6b8aba8a10b5298391133d1b06f005c307",
+      "validation_loss_improved": false,
+      "validation_accuracy_new_high": false,
+      "loss_wait": 7,
+      "accuracy_wait": 8
+    },
+    {
+      "epoch": 54,
+      "train": {
+        "loss": 0.11185763979911804,
+        "accuracy": 0.95882,
+        "correct": 47941,
+        "samples": 50000,
+        "batches": 782
+      },
+      "validation": {
+        "loss": 0.3229775465123355,
+        "accuracy": 0.9016,
+        "correct": 9016,
+        "samples": 10000,
+        "batches": 157,
+        "class_recall": {
+          "label": 6,
+          "total": 1033,
+          "correct": 760,
+          "recall": 0.7357212003872217
+        }
+      },
+      "seconds": 16.405369088999578,
+      "saved_as_best": false,
+      "sample_order": {
+        "sha256": "0da12721e6fb93a46276c887d7f5110920660d29a49ebc2bfb7ee963333e58fe",
+        "samples": 50000,
+        "unique_samples": 50000,
+        "encoding": "official index, little-endian int64",
+        "first_16": [
+          1405,
+          6808,
+          27755,
+          24452,
+          16176,
+          25752,
+          6105,
+          8729,
+          27333,
+          46501,
+          35497,
+          49573,
+          26691,
+          33233,
+          42947,
+          51521
+        ],
+        "last_16": [
+          4080,
+          18017,
+          25215,
+          11585,
+          51262,
+          6246,
+          20079,
+          23482,
+          54903,
+          24299,
+          32676,
+          23637,
+          5786,
+          4910,
+          56732,
+          45172
+        ]
+      },
+      "loader_state_before_sha256": "6863443ef928dd92e014e26956ed7f6b8aba8a10b5298391133d1b06f005c307",
+      "loader_state_after_sha256": "96a67c04b5dcd9caa5727f4c5cdaf8e85c8ea4b149d90daf5e3fdf3fef670b2f",
+      "validation_loss_improved": false,
+      "validation_accuracy_new_high": false,
+      "loss_wait": 8,
+      "accuracy_wait": 9
+    }
+  ],
+  "initialization": "Continuous resume from final epoch45 model, optimizer and all saved random states",
+  "initial_parameter_sha256": "d93fb0fa32c5d99dbe0810ecee5f0710f8caf3e491a2b8da4a594a26750f8353",
+  "initial_loader_state_sha256": "5feb54a46230d321d888e9b43cf5a57492665f199e4377408d79ee460e36679c",
+  "source_sha256": {
+    "cnn_model.py": "db6ba75f9888fa2cb9abb0ccf64391fcd23b607c15a7c0cf425c9e7b18d699bd",
+    "data.py": "d7ea3182710ff2455121d687a3300b6f5c5c28319015b10800196f745767171c",
+    "train.py": "20ce5c07f1866f73436a7962c820cb1f6423fc9b3349deccb3d24a3488760115",
+    "train_v2.py": "cadb8b55d93b13b52f7a731cbcaf20baee99396b5aae4f8b3264fa7eafc6f9c1",
+    "continue_cnn.py": "f705947ea3a00b2e52ea0b9c23b11e70df442ba8a503a7fd3c4345111d739b6b"
+  },
+  "checkpoint_files": [
+    "checkpoint_epoch_46.pt",
+    "checkpoint_epoch_47.pt",
+    "checkpoint_epoch_48.pt",
+    "checkpoint_epoch_49.pt",
+    "checkpoint_epoch_50.pt",
+    "checkpoint_epoch_51.pt",
+    "checkpoint_epoch_52.pt",
+    "checkpoint_epoch_53.pt",
+    "checkpoint_epoch_54.pt"
+  ],
+  "best_epoch": 45,
+  "training_seconds": 932.287534239993,
+  "numerical_checks": "Reused finite logits/loss/gradient/parameter checks; no clipping",
+  "checkpoint": "outputs/experiments/v2_sgd_lr003_resume45_max15epochs/best_cnn.pt",
+  "best_validation_accuracy": 0.915,
+  "best_validation_loss": 0.26141705612540245,
+  "original_config": {
+    "model": {
+      "name": "SimpleCNN",
+      "structure": "SimpleCNN(\n  (layers): Sequential(\n    (0): Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (1): ReLU()\n    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (3): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (4): ReLU()\n    (5): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (6): Flatten(start_dim=1, end_dim=-1)\n    (7): Linear(in_features=1568, out_features=64, bias=True)\n    (8): ReLU()\n    (9): Linear(in_features=64, out_features=10, bias=True)\n  )\n)",
+      "parameter_count": 105866
+    },
+    "learning_rate": 0.03,
+    "optimizer": "SGD (momentum=0, weight_decay=0)",
+    "optimizer_defaults": {
+      "lr": 0.03,
+      "momentum": 0,
+      "dampening": 0,
+      "weight_decay": 0,
+      "nesterov": false,
+      "maximize": false,
+      "foreach": null,
+      "differentiable": false
+    },
+    "loss_function": "CrossEntropyLoss (raw logits, reduction=mean)",
+    "seed": 42,
+    "split_seed": 42,
+    "shuffle_seed": 42,
+    "preprocessing": "ToTensor() only",
+    "batch_size": 64,
+    "num_workers": 0,
+    "train_shuffle": true,
+    "validation_shuffle": false,
+    "drop_last": false,
+    "device": "cpu",
+    "cpu_threads": 6,
+    "epochs_requested": 45,
+    "train_samples": 50000,
+    "validation_samples": 10000,
+    "batches_per_epoch": 782,
+    "validation_batches": 157,
+    "train_indices_sha256": "a448c5b6b20079fc657a6c5eee8ec6b22bdd1f0c1e76c9655deb217485cf2bb5",
+    "validation_indices_sha256": "8b4a616012cc94d9f775db511b05b73f276f2e9d953702badc238b63249f225d",
+    "class_names": [
+      "T-shirt/top",
+      "Trouser",
+      "Pullover",
+      "Dress",
+      "Coat",
+      "Sandal",
+      "Shirt",
+      "Sneaker",
+      "Bag",
+      "Ankle boot"
+    ],
+    "scheduler": null,
+    "augmentation": null,
+    "python": "3.11.13",
+    "versions": {
+      "torch": "2.2.2",
+      "torchvision": "0.17.2",
+      "numpy": "1.26.4",
+      "matplotlib": "3.11.2"
+    },
+    "test_set_used": false,
+    "best_selection_rule": "Higher validation accuracy; ties prefer lower validation loss; exact ties keep earlier."
+  },
+  "resumed_from": "outputs/experiments/v2_sgd_lr003_45epochs/checkpoint_epoch_45.pt",
+  "resumed_checkpoint_sha256": "fe9716e50dc107697fe406bb6b1176affa968abaf35400556089bfbc9492069f",
+  "parent_training_seconds": 776.0029346689989,
+  "continuation": {
+    "start_epoch": 46,
+    "maximum_extra_epochs": 15,
+    "completed_extra_epochs": 9,
+    "early_stopping": {
+      "patience": 8,
+      "baseline_epoch": 45,
+      "best_loss": 0.2575487187996507,
+      "best_accuracy": 0.915,
+      "loss_wait": 8,
+      "accuracy_wait": 9,
+      "rule": "Strict improvements since epoch45; stop when both wait counters >=8; ties are not improvements"
+    },
+    "stop_reason": "both_metrics_no_improvement_for_8_epochs"
+  },
+  "continuation_seconds": 156.28459957099403,
+  "final_checkpoint": "outputs/experiments/v2_sgd_lr003_resume45_max15epochs/checkpoint_epoch_54.pt",
+  "continuation_parameter_updates": 7038,
+  "total_parameter_updates": 42228,
+  "reload_validation": {
+    "loss": 0.26141705612540245,
+    "accuracy": 0.915,
+    "correct": 9150,
+    "samples": 10000,
+    "batches": 157,
+    "class_recall": {
+      "label": 6,
+      "total": 1033,
+      "correct": 824,
+      "recall": 0.797676669893514
+    }
+  },
+  "checkpoint_sha256": "6a38fa08d2de620491947e914ec13ab9d102a5b944111d881aeedd5d63a5c4da"
+}

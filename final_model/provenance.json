@@ -1,0 +1,26 @@
+{
+  "source_weight": "outputs/experiments/v2_resume45_lr001_15epochs/best_cnn.pt",
+  "source_weight_sha256": "c972ca96c5d63c81998a6d884f57ebc42406f04a02c5368bdf1d01178d19a570",
+  "source_full_checkpoint": "outputs/experiments/v2_resume45_lr001_15epochs/checkpoint_epoch_52.pt",
+  "source_full_checkpoint_sha256": "fc45ef9c42df6fb5c58ad72fef020ea63ec296d7fb5a757f274c1e129e903d08",
+  "source_history": "outputs/experiments/v2_resume45_lr001_15epochs/cnn_training_history.json",
+  "source_history_sha256": "6e35be0f2f389bf50bcc0fcd2aa1d0a587482e9a2ea12500b8302acbaa6bfee2",
+  "source_test_report": "outputs/final_evaluation/test_metrics.json",
+  "source_test_report_sha256": "706c133681ff5f1d5a637e8b7fc8fecb3fd6954c43f2ab6edb44a1987066be70",
+  "selected_epoch": 52,
+  "selection_rule": "Higher validation accuracy; ties prefer lower validation loss; exact ties keep earlier.",
+  "selected_before_test": true,
+  "copy_hashes_match": true,
+  "weights_bytes": 426764,
+  "checkpoint_parameters_match": true,
+  "test_re_evaluated_for_packaging": false,
+  "historical_checkpoints_in_public_package": false,
+  "training_source_sha256": {
+    "cnn_model.py": "db6ba75f9888fa2cb9abb0ccf64391fcd23b607c15a7c0cf425c9e7b18d699bd",
+    "data.py": "d7ea3182710ff2455121d687a3300b6f5c5c28319015b10800196f745767171c",
+    "train.py": "20ce5c07f1866f73436a7962c820cb1f6423fc9b3349deccb3d24a3488760115",
+    "train_v2.py": "cadb8b55d93b13b52f7a731cbcaf20baee99396b5aae4f8b3264fa7eafc6f9c1",
+    "continue_cnn.py": "f705947ea3a00b2e52ea0b9c23b11e70df442ba8a503a7fd3c4345111d739b6b",
+    "continue_cnn_lower_lr.py": "1fa59f15493b7c0ff791bad656404705fb00244a6504a46a6aa84843ad34d3a1"
+  }
+}

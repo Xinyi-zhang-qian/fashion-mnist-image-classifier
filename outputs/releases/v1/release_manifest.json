@@ -1,0 +1,123 @@
+{
+  "release": "V1",
+  "immutable_by_v2": true,
+  "model": "best_cnn.pt",
+  "checkpoint_sha256": "8dd026b17e7dc2033d0c8b6e444ecb005a4a69c99b20ef4d85d15d0425de1e85",
+  "original_checkpoint": "fashion-mnist-image-classifier/outputs/experiments/cnn_sgd_lr003_15epochs/best_cnn.pt",
+  "original_candidate": "fashion-mnist-image-classifier/outputs/experiments/cnn_learning_rate_comparison/candidate_model.json",
+  "checkpoint_epoch": 14,
+  "training_config": {
+    "model": {
+      "name": "SimpleCNN",
+      "structure": "SimpleCNN(\n  (layers): Sequential(\n    (0): Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (1): ReLU()\n    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (3): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (4): ReLU()\n    (5): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (6): Flatten(start_dim=1, end_dim=-1)\n    (7): Linear(in_features=1568, out_features=64, bias=True)\n    (8): ReLU()\n    (9): Linear(in_features=64, out_features=10, bias=True)\n  )\n)",
+      "parameter_count": 105866
+    },
+    "seed": 42,
+    "split_seed": 42,
+    "shuffle_seed": 42,
+    "preprocessing": "ToTensor() only",
+    "initialization": "Fresh model, optimizer and DataLoader; no checkpoint resume",
+    "optimizer": "SGD (momentum=0, weight_decay=0)",
+    "loss_function": "CrossEntropyLoss (raw logits, reduction=mean)",
+    "batch_size": 64,
+    "num_workers": 0,
+    "device": "cpu",
+    "cpu_threads": 6,
+    "epochs_requested": 15,
+    "train_samples": 50000,
+    "validation_samples": 10000,
+    "batches_per_epoch": 782,
+    "validation_batches": 157,
+    "python": "3.11.13",
+    "versions": {
+      "torch": "2.2.2",
+      "torchvision": "0.17.2",
+      "numpy": "1.26.4",
+      "matplotlib": "3.11.2"
+    },
+    "class_names": [
+      "T-shirt/top",
+      "Trouser",
+      "Pullover",
+      "Dress",
+      "Coat",
+      "Sandal",
+      "Shirt",
+      "Sneaker",
+      "Bag",
+      "Ankle boot"
+    ],
+    "test_set_used": false,
+    "learning_rate": 0.03,
+    "optimizer_settings": {
+      "momentum": 0,
+      "dampening": 0,
+      "weight_decay": 0,
+      "nesterov": false,
+      "maximize": false,
+      "foreach": null,
+      "differentiable": false
+    },
+    "train_shuffle": true,
+    "validation_shuffle": false,
+    "drop_last": false,
+    "scheduler": null,
+    "augmentation": null
+  },
+  "validation_metrics": {
+    "loss": 0.30977914645671845,
+    "accuracy": 0.8902,
+    "correct": 8902,
+    "samples": 10000,
+    "batches": 157,
+    "class_recall": {
+      "label": 6,
+      "total": 1033,
+      "correct": 553,
+      "recall": 0.5353339787028074
+    }
+  },
+  "shirt_to_pullover": 88,
+  "split_indices": "split_indices.json",
+  "split_indices_sha256": "806dd8624089f32ce888d1295ed6ffe579dcd9b3907bc8569d2cc6a21bf56e33",
+  "training_data_sha256": {
+    "train-images-idx3-ubyte": "c59f468a2f672dc815687fe0f83887768d799fd8a3f3276145d20f83aa44d888",
+    "train-labels-idx1-ubyte": "bad3541b69d912435c50bb6ba87bec294ff4f6a2e1246121d8633921760443d9"
+  },
+  "test_status": "测试未进行",
+  "test_set_used": false,
+  "copied_files": {
+    "best_cnn.pt": {
+      "source": "fashion-mnist-image-classifier/outputs/experiments/cnn_sgd_lr003_15epochs/best_cnn.pt",
+      "sha256": "8dd026b17e7dc2033d0c8b6e444ecb005a4a69c99b20ef4d85d15d0425de1e85"
+    },
+    "candidate_model.json": {
+      "source": "fashion-mnist-image-classifier/outputs/experiments/cnn_learning_rate_comparison/candidate_model.json",
+      "sha256": "5a8b5585ace395eb77151d2978da3e0be66b0884314e1361d106ce6e885a4c5e"
+    },
+    "cnn_training_history.json": {
+      "source": "fashion-mnist-image-classifier/outputs/experiments/cnn_sgd_lr003_15epochs/cnn_training_history.json",
+      "sha256": "a3e2bff46a1509b3b9e68a30cd9b1bce7147848ce88a7ffb138d9db6c01cc5d9"
+    },
+    "cnn_class_metrics.json": {
+      "source": "fashion-mnist-image-classifier/outputs/experiments/cnn_sgd_lr003_15epochs/cnn_class_metrics.json",
+      "sha256": "53d102c570135627cdb3e3ce0ecf01bbd316ca2545c62c7e9cf9368a3c2cee0e"
+    },
+    "source/cnn_model.py": {
+      "source": "fashion-mnist-image-classifier/src/cnn_model.py",
+      "sha256": "db6ba75f9888fa2cb9abb0ccf64391fcd23b607c15a7c0cf425c9e7b18d699bd"
+    },
+    "source/data.py": {
+      "source": "fashion-mnist-image-classifier/src/data.py",
+      "sha256": "d7ea3182710ff2455121d687a3300b6f5c5c28319015b10800196f745767171c"
+    },
+    "source/train.py": {
+      "source": "fashion-mnist-image-classifier/src/train.py",
+      "sha256": "20ce5c07f1866f73436a7962c820cb1f6423fc9b3349deccb3d24a3488760115"
+    },
+    "source/analyze_errors.py": {
+      "source": "fashion-mnist-image-classifier/src/analyze_errors.py",
+      "sha256": "6bbb2e7bbd58038c413061c70f3ed0a58864ea5685042c3e2d8e831c8af14b51"
+    }
+  }
+}

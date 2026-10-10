@@ -1,0 +1,109 @@
+{
+  "changed_factor": "SGD learning rate only: 0.003, 0.01, 0.03",
+  "matched_config": {
+    "model": {
+      "name": "SimpleCNN",
+      "structure": "SimpleCNN(\n  (layers): Sequential(\n    (0): Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (1): ReLU()\n    (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (3): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))\n    (4): ReLU()\n    (5): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)\n    (6): Flatten(start_dim=1, end_dim=-1)\n    (7): Linear(in_features=1568, out_features=64, bias=True)\n    (8): ReLU()\n    (9): Linear(in_features=64, out_features=10, bias=True)\n  )\n)",
+      "parameter_count": 105866
+    },
+    "seed": 42,
+    "split_seed": 42,
+    "shuffle_seed": 42,
+    "preprocessing": "ToTensor() only",
+    "initialization": "Fresh model, optimizer and DataLoader; no checkpoint resume",
+    "optimizer": "SGD (momentum=0, weight_decay=0)",
+    "loss_function": "CrossEntropyLoss (raw logits, reduction=mean)",
+    "batch_size": 64,
+    "num_workers": 0,
+    "device": "cpu",
+    "cpu_threads": 6,
+    "epochs_requested": 15,
+    "train_samples": 50000,
+    "validation_samples": 10000,
+    "batches_per_epoch": 782,
+    "validation_batches": 157,
+    "python": "3.11.13",
+    "versions": {
+      "torch": "2.2.2",
+      "torchvision": "0.17.2",
+      "numpy": "1.26.4",
+      "matplotlib": "3.11.2"
+    },
+    "class_names": [
+      "T-shirt/top",
+      "Trouser",
+      "Pullover",
+      "Dress",
+      "Coat",
+      "Sandal",
+      "Shirt",
+      "Sneaker",
+      "Bag",
+      "Ankle boot"
+    ],
+    "test_set_used": false
+  },
+  "models": [
+    {
+      "learning_rate": 0.003,
+      "status": "completed",
+      "completed_epochs": 15,
+      "validation_accuracy": 0.8201,
+      "validation_loss": 0.5072442337036133,
+      "best_epoch": 14,
+      "shirt_recall": 0.2884801548886738,
+      "shirt_correct": 298,
+      "shirt_total": 1033,
+      "shirt_to_pullover": 197,
+      "training_seconds": 258.5072172000073,
+      "parameter_count": 105866,
+      "checkpoint": "outputs/experiments/cnn_sgd_lr0003_15epochs/best_cnn.pt",
+      "checkpoint_sha256": "c6b85e6e7eed2ad1563ec570faa5a0220b19a40254459d4e66c16e379b54d9b5",
+      "history": "outputs/experiments/cnn_sgd_lr0003_15epochs/cnn_training_history.json",
+      "eligible_for_selection": true
+    },
+    {
+      "learning_rate": 0.01,
+      "status": "completed",
+      "completed_epochs": 15,
+      "validation_accuracy": 0.8695,
+      "validation_loss": 0.3698647301673889,
+      "best_epoch": 14,
+      "shirt_recall": 0.5062923523717329,
+      "shirt_correct": 523,
+      "shirt_total": 1033,
+      "shirt_to_pullover": 97,
+      "training_seconds": 226.39456236000115,
+      "parameter_count": 105866,
+      "checkpoint": "outputs/experiments/cnn_sgd_15epochs/best_cnn.pt",
+      "checkpoint_sha256": "ae5931704a808a74beb20806480f3b6fde8f2092595c3535d486fe6c2916222c",
+      "history": "outputs/experiments/cnn_sgd_15epochs/cnn_training_history.json",
+      "eligible_for_selection": true
+    },
+    {
+      "learning_rate": 0.03,
+      "status": "completed",
+      "completed_epochs": 15,
+      "validation_accuracy": 0.8902,
+      "validation_loss": 0.30977914645671845,
+      "best_epoch": 14,
+      "shirt_recall": 0.5353339787028074,
+      "shirt_correct": 553,
+      "shirt_total": 1033,
+      "shirt_to_pullover": 88,
+      "training_seconds": 229.4590227590088,
+      "parameter_count": 105866,
+      "checkpoint": "outputs/experiments/cnn_sgd_lr003_15epochs/best_cnn.pt",
+      "checkpoint_sha256": "8dd026b17e7dc2033d0c8b6e444ecb005a4a69c99b20ef4d85d15d0425de1e85",
+      "history": "outputs/experiments/cnn_sgd_lr003_15epochs/cnn_training_history.json",
+      "eligible_for_selection": true
+    }
+  ],
+  "selected_checkpoint": "outputs/experiments/cnn_sgd_lr003_15epochs/best_cnn.pt",
+  "baseline_audit": "baseline_audit.json",
+  "limitations": [
+    "Original 0.01 run did not store initial-weight or batch-order fingerprints; replayed states are reconstructed evidence, not recorded original-run states.",
+    "New per-batch finite checks and history writes add overhead; recorded times are not a strict speed benchmark.",
+    "One seed and validation split; no test-set evaluation."
+  ]
+}

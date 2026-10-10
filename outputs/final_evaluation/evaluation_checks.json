@@ -1,0 +1,17 @@
+{
+  "samples": 10000,
+  "correct": 9165,
+  "errors": 835,
+  "confusion_sum": 10000,
+  "diagonal_sum": 9165,
+  "class_support_sum": 10000,
+  "class_prediction_sum": 10000,
+  "all_test_indices_unique_and_complete": true,
+  "official_labels_match": true,
+  "validation_matches_saved_epoch52": true,
+  "model_eval": true,
+  "parameter_fingerprint_before": "14cdccc84c4b1bd61737f3f0daa168b0f5278ee46f98517defee83279de0bab6",
+  "parameter_fingerprint_after": "14cdccc84c4b1bd61737f3f0daa168b0f5278ee46f98517defee83279de0bab6",
+  "all_parameter_gradients_none": true,
+  "source_and_frozen_weight_sha256": "c972ca96c5d63c81998a6d884f57ebc42406f04a02c5368bdf1d01178d19a570"
+}
